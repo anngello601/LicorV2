@@ -1,0 +1,16 @@
+.fondo{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("img/fondo.webp");
+    background-size: cover; 
+}
+#cabeza{
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    font-size: 30px;
+    background-color: blue;
+    color: white;
+}
+
