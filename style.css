@@ -1,9 +1,15 @@
 .fondo{
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: -10px;
     padding: 0;
     background-image: url("img/fondo.jpg");
     background-size: cover; 
+}
+.sinFondo{
+    font-family: Arial, sans-serif;
+    margin: -10px;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
 }
 #cabezaTabla{
     width: 100%;
@@ -24,13 +30,69 @@
     margin: auto;
     text-shadow: 4px 4px 6px black;
 }
-
 #cena{
     width: 10%;
     height: 70px;
     font-size: 30px;
     background-color:rgb(60, 9, 9);
     color: white;
+    text-align: center;
+    margin: auto;
+}
+#descipcion{
+    width: 40%;
+    height: 15%;
+    font-size: 30px;
+    background-color: rgb(22, 15, 15);
+    font-size: 18px;
+    text-align: center;
+    margin: auto;
+    color: white;
+}
+#CatalogoHistoria{
+    width: 30%;
+    height: 70px;
+    border-spacing: 20px;
+    border: 3px solid rgb(0, 0, 0);
+    font-size: 20px;
+    background-color:rgb(205, 139, 16);
+    border-radius: 10px ;
+    border-right: 2px solid rgb(0, 0, 0);
+    border-collapse: separate;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: auto;
+}
+.separador{
+    width: 1px;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+}
+#Caracteristicas{
+    width: 60%;
+    height: 70px;
+    text-shadow: 4px 3px 10px black;
+    background-color: rgb(58, 168, 193);
+    border-spacing: 20px;
+    border: 3px solid rgb(0, 0, 0);
+    font-size: 30px;
+    border-radius: 10px ;
+    border-right: 2px solid rgb(0, 0, 0);
+    border-collapse: separate;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: auto;
+}
+#CategoriasVinos{
+    width: 80%;
+    height: 70px;
+    border-spacing: 20px;
+    border: 3px solid rgb(0, 0, 0);
+    font-size: 20px;
+    border-radius: 10px ;
+    border-right: 2px solid rgb(0, 0, 0);
+    border-collapse: separate;
+    color: rgb(0, 0, 0);
     text-align: center;
     margin: auto;
 }
