@@ -33,7 +33,8 @@
     margin: auto;
 }
 p {
-    margin: 0;        /* elimina márgenes por defecto */
-    padding: 0;       /* elimina cualquier padding */
-    line-height: 1.5; /* opcional: reduce la altura de línea si quieres que el texto esté más compacto */
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
 }
+
