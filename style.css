@@ -21,8 +21,10 @@
     text-align: center;
     font-size: 70px;
     letter-spacing: 0px;
+    margin: auto;
     text-shadow: 4px 4px 6px black;
 }
+
 #cena{
     width: 10%;
     height: 70px;
@@ -31,9 +33,4 @@
     color: white;
     text-align: center;
     margin: auto;
-}
-p{
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
 }
