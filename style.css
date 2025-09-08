@@ -23,7 +23,6 @@
     letter-spacing: 0px;
     text-shadow: 4px 4px 6px black;
 }
-
 #cena{
     width: 10%;
     height: 70px;
@@ -32,10 +31,4 @@
     color: white;
     text-align: center;
     margin: auto;
-}
-
-p {
-    margin: 0;        /* elimina márgenes por defecto */
-    padding: 0;       /* elimina cualquier padding */
-    line-height: 1.5; /* opcional: reduce la altura de línea si quieres que el texto esté más compacto */
 }
