@@ -216,4 +216,178 @@ nav a:hover {
     width: 100%;
     max-width: 250px;
   }
+
+}
+
+/* VENTANA DE VISITANOS Y CONTACTANOS */
+
+/* SECCIÓN CONTACTO  */
+
+.contacto {
+  background-color: #fff8f3;
+  padding: 60px 10%;
+  text-align: center;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contacto h1 {
+  font-size: 2rem;
+  color: #b45b15;
+  margin-bottom: 10px;
+}
+
+.contacto .resaltado {
+  color: #d2691e;
+  font-weight: bold;
+}
+
+.contacto p {
+  color: #444;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+/*  COLUMNA IZQUIERDA  */
+
+.info_contacto {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 25px 30px;
+  text-align: left;
+  max-width: 450px;
+}
+
+.info_contacto h2 {
+  color: #b45b15;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #d2691e;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.info_contacto p {
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+
+.telefonos {
+  list-style: none; /* quita los puntos */
+  padding-left: 0;
+  margin-top: 5px;
+}
+
+.telefonos li {
+  margin: 3px 0;
+  font-size: 0.95rem;
+}
+
+/*  MAPA */
+.mapa iframe {
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE  */
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info_contacto {
+    width: 100%;
+  }
+}
+
+.formulario h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #b45b15;
+}
+
+/* filas del formulario */
+.form-row {
+  margin-bottom: 12px;
+}
+
+/* dos columnas: nombre Y apellido */
+.two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #d2691e;
+}
+
+/* botón */
+button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background-color: #d2691e;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+button:hover {
+  background-color: #b45b15;
+}
+
+/* Responsive: en pantallas pequeñas apila las columnas */
+@media (max-width: 700px) {
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* alinea arriba */
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+/* Columna derecha: formulario */
+.formulario {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 25px 30px;
+  text-align: left;
+  max-width: 450px;
+  flex: 1;
 }
