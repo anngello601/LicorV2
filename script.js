@@ -1,12 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
-  // Mostrar loader al inicio
+  if (!loader) return; // evita errores si no existe el loader
+  // Mostrar loader (por si acaso)
   loader.style.display = "flex";
-  // Esperar unos segundos antes de ocultar
+  // Ocultar con animación suave
   setTimeout(() => {
-    loader.style.opacity = "0"; // efecto de desvanecimiento
+    loader.style.transition = "opacity 1s ease";
+    loader.style.opacity = "0";
     setTimeout(() => {
       loader.style.display = "none";
+      document.body.style.overflow = "auto"; // permite scroll luego
     }, 1000);
   }, 3000);
 });
