@@ -22,7 +22,6 @@
   align-items: center;
   text-align: center;
 }
-
 .loader-logo {
   opacity: 0;
   transform: scale(0.5);
@@ -31,7 +30,6 @@
   animation: logoShow 1.5s ease forwards;
   animation-delay: 1s; /* el logo aparece después del texto */
 }
-
 /* Animaciones del logo */
 @keyframes logoShow {
   0% {
@@ -47,14 +45,12 @@
     transform: scale(1) rotate(0deg);
   }
 }
-
 /* Pequeña animación de entrada para el texto */
 #loader .loader-content h1 {
   font-size: 2rem;
   color: gold;
   animation: slideIn 1s ease forwards;
 }
-
 #loader .loader-content h2 {
   font-size: 1.5rem;
   margin-top: 0.5rem;
@@ -62,7 +58,6 @@
   animation: fadeIn 1.5s ease forwards;
   animation-delay: 2s; /* después del logo */
 }
-
 /* Fuente y márgenes */
 * {
   margin: 0;
@@ -70,7 +65,6 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-
 /* Fondo principal */
 .fondo_Inicio {
   background-image: url("img/fondo.jpg");
@@ -80,7 +74,6 @@
   min-height: 100vh;
   color: white;
 }
-
 /* Encabezado */
 header {
   background-color: rgb(60, 9, 9);
@@ -91,38 +84,31 @@ header {
   transition: background-color 0.3s ease;
   flex-wrap: wrap;
 }
-
 header:hover {
   background-color: rgb(90, 20, 20);
 }
-
 header .logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
 }
-
 nav {
   display: flex;
   align-items: center;
   gap: 1.2rem;
 }
-
 nav a {
   color: white;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s;
 }
-
 nav a:hover {
   color: rgb(234, 196, 7);
 }
-
 .llamar {
   color: rgb(234, 196, 7);
 }
-
 .carrito {
   background-color: sandybrown;
   color: white;
@@ -132,35 +118,29 @@ nav a:hover {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
 .carrito:hover {
   background-color: rgb(205, 139, 16);
 }
-
 /* Sección principal */
 .inicio {
   text-align: center;
   padding: 10% 5%;
   background-color: rgba(0, 0, 0, 0.6);
 }
-
 .subtitulo {
   color: red;
   font-size: 1.5rem;
 }
-
 .titulo {
   font-size: 4rem;
   font-weight: bold;
   text-shadow: 4px 4px 8px black;
 }
-
 .titulo span {
   background-color: rgb(60, 9, 9);
   padding: 0.2rem 0.6rem;
   border-radius: 6px;
 }
-
 .descripcion {
   margin: 1.5rem auto;
   max-width: 600px;
@@ -168,7 +148,6 @@ nav a:hover {
   line-height: 1.5;
   color: #f0f0f0;
 }
-
 .botones {
   display: flex;
   justify-content: center;
@@ -176,7 +155,6 @@ nav a:hover {
   gap: 1rem;
   margin-top: 2rem;
 }
-
 .btn1, .btn2 {
   padding: 0.8rem 1.5rem;
   border-radius: 10px;
@@ -185,27 +163,22 @@ nav a:hover {
   cursor: pointer;
   transition: all 0.3s;
 }
-
 .btn1 {
   background-color: rgb(205, 139, 16);
   color: white;
   border: none;
 }
-
 .btn1:hover {
   background-color: rgb(230, 180, 30);
 }
-
 .btn2 {
   background-color: transparent;
   color: white;
 }
-
 .btn2:hover {
   background-color: white;
   color: rgb(60, 9, 9);
 }
-
 /* Sección inferior */
 .caracteristicas {
   display: flex;
@@ -218,33 +191,27 @@ nav a:hover {
   text-shadow: 2px 2px 5px black;
   flex-wrap: wrap;
 }
-
 /* Responsividad */
 @media (max-width: 768px) {
   .titulo {
     font-size: 2.5rem;
   }
-
   nav {
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .descripcion {
     font-size: 1rem;
   }
-
   .caracteristicas {
     flex-direction: column;
     text-align: center;
   }
 }
-
 @media (max-width: 480px) {
   .titulo {
     font-size: 2rem;
   }
-
   .btn1, .btn2 {
     width: 100%;
     max-width: 250px;
