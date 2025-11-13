@@ -1,3 +1,15 @@
+/* Elimina márgenes del body */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Crea espacio solo para compensar la altura del header */
+main {
+  padding-top: 120px;
+  /* ajusta este valor al alto de tu header */
+}
+
 /* ===== Loader ===== */
 #loader {
   position: fixed;
@@ -15,6 +27,7 @@
   font-family: 'Arial', sans-serif;
   transition: opacity 1s ease;
 }
+
 .loader-content {
   display: flex;
   flex-direction: column;
@@ -22,42 +35,52 @@
   align-items: center;
   text-align: center;
 }
+
 .loader-logo {
   opacity: 0;
   transform: scale(0.5);
   margin: 20px 0;
-  border-radius: 15px; /* bordes suaves */
+  border-radius: 15px;
+  /* bordes suaves */
   animation: logoShow 1.5s ease forwards;
-  animation-delay: 1s; /* el logo aparece después del texto */
+  animation-delay: 1s;
+  /* el logo aparece después del texto */
 }
+
 /* Animaciones del logo */
 @keyframes logoShow {
   0% {
     opacity: 0;
     transform: scale(0.5) rotate(-15deg);
   }
+
   60% {
     opacity: 1;
     transform: scale(1.1) rotate(5deg);
   }
+
   100% {
     opacity: 1;
     transform: scale(1) rotate(0deg);
   }
 }
+
 /* Pequeña animación de entrada para el texto */
 #loader .loader-content h1 {
   font-size: 2rem;
   color: gold;
   animation: slideIn 1s ease forwards;
 }
+
 #loader .loader-content h2 {
   font-size: 1.5rem;
   margin-top: 0.5rem;
   opacity: 0;
   animation: fadeIn 1.5s ease forwards;
-  animation-delay: 2s; /* después del logo */
+  animation-delay: 2s;
+  /* después del logo */
 }
+
 /* Fuente y márgenes */
 * {
   margin: 0;
@@ -65,6 +88,7 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+
 /* Fondo principal */
 .fondo_Inicio {
   background-image: url("img/fondo.jpg");
@@ -74,41 +98,201 @@
   min-height: 100vh;
   color: white;
 }
+
 /* Encabezado */
+/* --- MENÚ HAMBURGUESA AJUSTADO --- */
+/* NAVBAR LIMPIA Y ELEGANTE */
+.navbar {
+  width: 100%;
+  background-color: #3a0000; /* vino oscuro elegante */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f39c12;
+}
+
+/* Enlaces */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f39c12;
+}
+
+/* Botón carrito */
+.carrito {
+  background-color: #f39c12;
+  border: none;
+  color: #111;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.carrito:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+/* Hamburguesa */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #3a0000;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+}
+
+/* --- MODO MÓVIL --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+}
+
+/* --- VERSIÓN MÓVIL --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+}
+/* Estilos del header fijo */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: rgb(60, 9, 9);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  transition: background-color 0.3s ease;
-  flex-wrap: wrap;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+.espacio-header {
+  height: 70px;
+}
+
 header:hover {
   background-color: rgb(90, 20, 20);
 }
+
 header .logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
 }
+
 nav {
   display: flex;
   align-items: center;
   gap: 1.2rem;
 }
+
 nav a {
   color: white;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s;
 }
+
 nav a:hover {
   color: rgb(234, 196, 7);
 }
+
 .llamar {
   color: rgb(234, 196, 7);
 }
+
 .carrito {
   background-color: sandybrown;
   color: white;
@@ -118,29 +302,35 @@ nav a:hover {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 .carrito:hover {
   background-color: rgb(205, 139, 16);
 }
+
 /* Sección principal */
 .inicio {
   text-align: center;
   padding: 10% 5%;
   background-color: rgba(0, 0, 0, 0.6);
 }
+
 .subtitulo {
   color: red;
   font-size: 1.5rem;
 }
+
 .titulo {
   font-size: 4rem;
   font-weight: bold;
   text-shadow: 4px 4px 8px black;
 }
+
 .titulo span {
   background-color: rgb(60, 9, 9);
   padding: 0.2rem 0.6rem;
   border-radius: 6px;
 }
+
 .descripcion {
   margin: 1.5rem auto;
   max-width: 600px;
@@ -148,6 +338,7 @@ nav a:hover {
   line-height: 1.5;
   color: #f0f0f0;
 }
+
 .botones {
   display: flex;
   justify-content: center;
@@ -155,30 +346,44 @@ nav a:hover {
   gap: 1rem;
   margin-top: 2rem;
 }
-.btn1, .btn2 {
+
+.btn1,
+.btn2 {
+  width: 30%;
+  /* ocupa solo una parte del ancho */
   padding: 0.8rem 1.5rem;
   border-radius: 10px;
   border: 2px solid white;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s;
+  display: inline-block;
+  background: transparent;
+  color: white;
+  text-align: center;
+  margin: 5px;
 }
+
 .btn1 {
   background-color: rgb(205, 139, 16);
   color: white;
   border: none;
 }
+
 .btn1:hover {
   background-color: rgb(230, 180, 30);
 }
+
 .btn2 {
   background-color: transparent;
   color: white;
 }
+
 .btn2:hover {
   background-color: white;
   color: rgb(60, 9, 9);
 }
+
 /* Sección inferior */
 .caracteristicas {
   display: flex;
@@ -191,28 +396,35 @@ nav a:hover {
   text-shadow: 2px 2px 5px black;
   flex-wrap: wrap;
 }
+
 /* Responsividad */
 @media (max-width: 768px) {
   .titulo {
     font-size: 2.5rem;
   }
+
   nav {
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .descripcion {
     font-size: 1rem;
   }
+
   .caracteristicas {
     flex-direction: column;
     text-align: center;
   }
 }
+
 @media (max-width: 480px) {
   .titulo {
     font-size: 2rem;
   }
-  .btn1, .btn2 {
+
+  .btn1,
+  .btn2 {
     width: 100%;
     max-width: 250px;
   }
@@ -260,7 +472,7 @@ nav a:hover {
 
 .info_contacto {
   background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 25px 30px;
   text-align: left;
@@ -281,7 +493,8 @@ nav a:hover {
 }
 
 .telefonos {
-  list-style: none; /* quita los puntos */
+  list-style: none;
+  /* quita los puntos */
   padding-left: 0;
   margin-top: 5px;
 }
@@ -303,6 +516,7 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
   }
+
   .info_contacto {
     width: 100%;
   }
@@ -372,10 +586,12 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
+
 .container {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* alinea arriba */
+  align-items: flex-start;
+  /* alinea arriba */
   flex-wrap: wrap;
   gap: 40px;
   margin-top: 30px;
@@ -384,7 +600,7 @@ button:hover {
 /* Columna derecha: formulario */
 .formulario {
   background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 25px 30px;
   text-align: left;
@@ -392,57 +608,54 @@ button:hover {
   flex: 1;
 }
 
-
-*{
-    margin: 0;
-    padding: 40;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 40;
+  box-sizing: border-box;
 }
 
-.hero{
-    height: 100vh;
+.hero {
+  height: 100vh;
 
 
 }
 
-
-.categoriasprimera{
-
-    padding:10rem;
-    padding-top:1;
-    
-
+.categoriasprimera {
+  padding: 10rem;
+  padding-top: 1;
 }
 
 .titles {
-    text-align: center;
-    padding-inline: 8rem;
-    gap: 50rem;
+  text-align: center;
+  padding-inline: 8rem;
+  gap: 50rem;
 }
 
 
 .Titulo {
-font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: bold;
   margin: 0;
   gap: 50rem;
   margin-bottom: 20px;
 
 }
+
 .parte1 {
-  color: #000000; 
+  color: #000000;
   font-size: 45px;
 }
+
 .parte2 {
-  color: #D97706; 
-  
+  color: #D97706;
+
   font-size: 45px;
 
 }
 
 
 
-p{
+p {
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 35px;
 }
@@ -451,11 +664,11 @@ p{
 
 .categorias {
   display: flex;
-  justify-content: center;  
-  align-items: center;     
-  flex-wrap: wrap;           
-  gap: 40px;                 
-  padding: 100px 20px;       
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 100px 20px;
   background-color: #f8f8f8;
 }
 
@@ -466,7 +679,7 @@ p{
   height: 300px;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
 }
 
@@ -485,7 +698,7 @@ p{
 
 .categoria .contenido {
   position: absolute;
-  top: 30%;                
+  top: 30%;
   left: 0;
   color: white;
   padding: 15px;
@@ -530,104 +743,200 @@ p{
   background-color: #e36f00;
 }
 
-/*== catalogo de vino   ==*/
-.catalogo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(20, 20, 20, 0.97);
-  color: white;
-  display: none; /* Oculto inicialmente */
-  flex-direction: column;
-  padding: 30px;
-  z-index: 1000;
-  overflow-y: auto;
-  animation: fadeIn 0.5s ease forwards;
-  opacity: 0;
+/* Historia */
+.Historia {
+  background: linear-gradient(180deg, #0b1114 0%, #1f2933 100%);
+  color: #e6eef6;
+  padding: 60px 20px;
+  font-family: "Montserrat", Arial, sans-serif;
 }
 
-/* Animación al mostrarse */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.Historia .title {
+  font-family: "Playfair Display", serif;
+  font-size: 44px;
+  font-weight: 700;
+  text-align: center;
 }
 
-/* Encabezado del catálogo */
-.catalogo-header {
+.Historia .accent {
+  color: #f39c12;
+}
+
+.Historia .subtitle {
+  margin-top: 10px;
+  color: #bfc8d2;
+  font-size: 14px;
+  text-align: center;
+}
+
+.Historia .main {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.Historia .left {
+  padding: 10px;
+}
+
+.Historia .section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.Historia .text-panel {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding: 16px;
+  color: #bfc8d2;
+  border: 1px dashed rgba(255, 255, 255, 0.06);
+}
+
+.Historia .text-panel p {
+  font-size: 13px;
+  margin: 8px 0;
+}
+
+.Historia .mv-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.Historia .mv {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.Historia .mv h4 {
+  color: #f39c12;
+  margin-bottom: 8px;
+}
+
+.Historia .mv p {
+  color: #bfc8d2;
+  font-size: 13px;
+}
+
+.Historia .stats {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.catalogo-header h2 {
-  font-size: 2rem;
-  color: #ff7b00;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.catalogo-header button {
-  background-color: #ff7b00;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.catalogo-header button:hover {
-  background-color: #e36f00;
-  transform: scale(1.05);
-}
-
-/* Contenedor de los vinos */
-.catalogo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-}
-
-.vino-item {
-  background-color: #222;
-  padding: 15px;
-  border-radius: 10px;
+  gap: 15px;
+  margin-top: 25px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.vino-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(255, 123, 0, 0.3);
+.Historia .stat {
+  flex: 1;
 }
 
-.vino-item img {
+.Historia .icon {
+  font-size: 26px;
+  color: #f39c12;
+}
+
+.Historia .stat strong {
+  display: block;
+  color: white;
+  margin-top: 6px;
+  font-size: 18px;
+}
+
+.Historia .stat small {
+  color: #bfc8d2;
+  font-size: 12px;
+}
+
+.Historia .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Historia .image-wrap {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.Historia .image-wrap img {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
 }
 
-.vino-item h3 {
-  color: #ffae42;
-  font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
-  margin-bottom: 5px;
+.Historia .badge {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  background-color: #f39c12;
+  color: #0b0b0b;
+  font-weight: 700;
+  padding: 10px 15px;
+  border-radius: 8px;
 }
 
-.vino-item p {
-  font-weight: bold;
+/* Responsivo */
+@media (max-width: 880px) {
+  .Historia .main {
+    grid-template-columns: 1fr;
+  }
+
+  .Historia .right {
+    order: -1;
+  }
+
+  .Historia .image-wrap img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 520px) {
+  .Historia .title {
+    font-size: 34px;
+  }
+
+  .Historia .mv-row {
+    flex-direction: column;
+  }
+}
+
+/* Creditos */
+.creditos {
+  background-color: #111;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 25px 10px;
+  font-family: "Montserrat", sans-serif;
+  border-top: 2px solid #f39c12;
+}
+
+.creditos p {
+  margin: 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.redes {
+  margin-top: 10px;
+}
+
+.redes a {
+  color: #f39c12;
+  margin: 0 10px;
+  font-size: 22px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.redes a:hover {
   color: #fff;
 }
-
-
-

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="producto.css">
 </head>
+
 <body>
+  <div class="espacio-header"></div>
   <div id="loader">
     <div class="loader-content">
       <h1>Bienvenido a la Licorería</h1>
@@ -15,18 +18,27 @@
       <h2>La Última Cena</h2>
     </div>
   </div>
-  <header>
-    <div class="logo">Licores</div>
-    <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Productos</a>
-      <a href="#">Sobre Nosotros</a>
-      <a href="#">Contacto</a>
-      <a href="#" class="llamar">Llamar</a>
-      <button class="carrito">Carrito</button>
-    </nav>
+  <header class="navbar">
+  <div class="logo">Licores</div>
+
+  <!-- Botón de hamburguesa -->
+  <button class="menu-toggle" id="menu-toggle">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#ProductoDestacado">Productos Destacados</a></li>
+    <li><a href="#categoriasprimera">Catálogo</a></li>
+    <li><a href="#historia">Sobre Nosotros</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#" class="llamar">Llamar</a></li>
+    <li><button class="carrito">Carrito</button></li>
+  </ul>
+</header>
   </header>
-  <main class="fondo_Inicio">
+
+  <main class="fondo_Inicio" id="inicio">
     <section class="inicio">
       <h2 class="subtitulo">LICORES</h2>
       <h1 class="titulo">La última <span>Cena</span></h1>
@@ -45,382 +57,290 @@
       <div>Ubicación central</div>
     </section>
   </main>
-    <div class="sinFondo">
-        <br>
-        <h1 style="text-align: center;">Nuestros</h1>
-        <h1 style="text-align: center;color: orange;">Productos Destacados</h1>
-        <h2 style="text-align: center;">Una selección especial de nuestros licores más exclusivos y populares.</h2>
-        <br><br>
-        <table id="CategoriasVinos">
-            <tr>
-                <th>Vino</th>
-                <th>Whisky Macallan 18 años</th>
-                <th>Licor Exclusivo</th>
-                <th>Gin Artesanal Premium</th>
-            </tr>
-            <tr>
-                <td>Un vino tinto reserva con notas afrutadas.</td>
-                <td>Whisky escocés de 18 años, una joya para conocedores.</td>
-                <td>Licor de hierbas único, destilado de forma tradicional.</td>
-                <td>Gin artesanal con un toque cítrico.</td>
-            </tr>
-            <tr>
-                <td><img width="300" src="img/vino.jpg" alt="Vino"></td>
-                <td><img width="300" src="img/Whiski.jpg" alt="Whisky Macallan 18 años"></td>
-                <td><img width="300" src="img/licor.jpg" alt="Licor"></td>
-                <td><img width="150" src="img/cerveza.jpg" alt="Gin Artesanal Premium"></td>
-            </tr>
-            <tr>
-                <td>Precio: S/.85</td>
-                <td>Precio: S/.450</td>
-                <td>Precio: S/.95</td>
-                <td>Precio: S/.125</td>
-            </tr>
-            <tr>
-                <td><button class="add-to-cart" data-name="Vino" data-price="85">Añadir al Carrito</button></td>
-                <td><button class="add-to-cart" data-name="Whisky Macallan 18 años" data-price="450">Añadir al Carrito</button></td>
-                <td><button class="add-to-cart" data-name="Licor Exclusivo" data-price="95">Añadir al Carrito</button></td>
-                <td><button class="add-to-cart" data-name="Gin Artesanal Premium" data-price="125">Añadir al Carrito</button></td>
-            </tr>
-        </table>
-        <br>
-        <div style="text-align: center;">
-            <a href="todos-los-productos.html" class="ver-mas-btn">VER TODOS LOS PRODUCTOS</a>
-        </div>
-        <br>
+  <div class="ProductoDestacado" id="ProductoDestacado" ">
+    <br>
+    <br>
+    <br>
+    <h1 style=" text-align: center;">Nuestros</h1>
+    <h1 style="text-align: center; color: orange;">Productos Destacados</h1>
+    <h2 style="text-align: center;">Una selección especial de nuestros licores más exclusivos y populares.</h2>
+    <br>
+
+    <div id="CategoriasVinos">
+      <div class="producto">
+        <h3>Vino</h3>
+        <p>Un vino tinto reserva con notas afrutadas.</p>
+        <img src="img/vino.jpg" alt="Vino">
+        <p><strong>Precio: S/.85</strong></p>
+        <button class="add-to-cart" data-name="Vino" data-price="85">Añadir al Carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Whisky Macallan 18 años</h3>
+        <p>Whisky escocés de 18 años, una joya para conocedores.</p>
+        <img src="img/Whiski.jpg" alt="Whisky Macallan 18 años">
+        <p><strong>Precio: S/.450</strong></p>
+        <button class="add-to-cart" data-name="Whisky Macallan 18 años" data-price="450">Añadir al Carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Licor Exclusivo</h3>
+        <p>Licor de hierbas único, destilado de forma tradicional.</p>
+        <img src="img/licor.jpg" alt="Licor Exclusivo">
+        <p><strong>Precio: S/.95</strong></p>
+        <button class="add-to-cart" data-name="Licor Exclusivo" data-price="95">Añadir al Carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Gin Artesanal Premium</h3>
+        <p>Gin artesanal con un toque cítrico.</p>
+        <img src="img/cerveza.jpg" alt="Gin Artesanal Premium" height="10">
+        <p><strong>Precio: S/.125</strong></p>
+        <button class="add-to-cart" data-name="Gin Artesanal Premium" data-price="125">Añadir al Carrito</button>
+      </div>
     </div>
-    <script src="script.js"></script>
-    <script src="app.js"></script>
-<!-- Código de Nuestra categorias -->
+    <br>
+    <div>
+      <a href="todos-los-productos.html" class="ver-mas-btn">VER TODOS LOS PRODUCTOS</a>
+    </div>
+  </div>
+  <br>
+  </div>
+  <!-- Código de Nuestra categorias -->
+  <selection class="categoriasprimera" id="categoriasprimera">
+    <div class="titles" style="margin-top: 80px;">
+      <div class="Titulo">
+        <spam class="parte1">Nuestras</spam>
+        <span class="parte2">Categoria</span>
+      </div>
+      <p style="font-family: Arial, Helvetica, sans-serif;"> Explora nuestra cuidadosa selección organizada por
+        categorías, cada una con
+        productos de la más alta calidad</p>
+    </div>
 
- <body>
-   
-    <!-- Sección principal de categorías -->
-    <section class="categoriasprimera">
-        <div class="titles" style="margin-top: 80px;">
-            <div class="Titulo">
-                <span class="parte1">Nuestras</span>
-                <span class="parte2">Categorías</span>
-            </div>
-            <p style="font-family: Arial, Helvetica, sans-serif;">
-                Explora nuestra cuidadosa selección organizada por categorías, cada una con productos de la más alta calidad.
-            </p>
+    <section class="categorias">
+      <div class="categoria">
+        <img src="img/img1.jpg" alt="Café">
+        <div class="contenido">
+          <h3>Vinos Selectos</h3>
+          <p>Tintos, blancos y rosados de las
+            mejores bodegas</p>
+          <div class="info">
+            <span>150+ productos</span>
+            <button>Ver más</button>
+          </div>
         </div>
+      </div>
+      <div class="categoria">
+        <img src="img/d2.jpg" alt="Jugos Naturales">
+        <div class="contenido">
+          <h3>Whisky Premium</h3>
+          <p>Escoceses, irlandeses y bourbons
+            exclusivos</p>
+          <div class="info">
+            <span>85+ productos</span>
+            <button>Ver más</button>
+          </div>
+        </div>
+      </div>
+      <div class="categoria">
+        <img src="img/d33.jpg" alt="Cocteles">
+        <div class="contenido">
+          <h3>Licores Artesanales</h3>
+          <p>Destilados unicos y licores especiales</p>
+          <div class="info">
+            <span>120+ productos</span>
+            <button>Ver más</button>
+          </div>
+        </div>
+      </div>
 
-        <!-- === CATEGORÍAS === -->
-        <section class="categorias">
-            
-            <!-- Vinos Selectos -->
-            <div class="categoria">
-                <img src="img/img1.jpg" alt="Vinos Selectos">
-                <div class="contenido">
-                    <h3>Vinos Selectos</h3>
-                    <p>Tintos, blancos y rosados de las mejores bodegas</p>
-                    <div class="info">
-                        <span>150+ productos</span>
-                        <button id="verMasVinos">Ver más</button>
-                    </div>
-                </div>
-            </div>
-
-            
-            <!-- Whisky Premium -->
-            <div class="categoria">
-                <img src="img/d2.jpg" alt="Whisky Premium">
-                <div class="contenido">
-                    <h3>Whisky Premium</h3>
-                    <p>Escoceses, irlandeses y bourbons exclusivos</p>
-                    <div class="info">
-                        <span>85+ productos</span>
-                        <button id="verMasWhisky">Ver más</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Licores Artesanales -->
-            <div class="categoria">
-                <img src="img/d33.jpg" alt="Licores Artesanales">
-                <div class="contenido">
-                    <h3>Licores Artesanales</h3>
-                    <p>Destilados únicos y licores especiales</p>
-                    <div class="info">
-                        <span>120+ productos</span>
-                        <button id="verMasLicores">Ver más</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Cervezas Premium -->
-            <div class="categoria">
-                <img src="img/d4.jpg" alt="Cervezas Premium">
-                <div class="contenido">
-                    <h3>Cervezas Premium</h3>
-                    <p>Artesanales, importadas y ediciones limitadas</p>
-                    <div class="info">
-                        <span>200+ productos</span>
-                        <button id="verMasCerveza">Ver más</button>
-                    </div>
-                </div>
-            </div>
-
-        </section>
+      <div class="categoria">
+        <img src="img/d4.jpg" alt="Refrescos">
+        <div class="contenido">
+          <h3>Cervezas Premium</h3>
+          <p>Artesanales, importadas y ediciones
+            limitadas</p>
+          <div class="info">
+            <span>200+ productos</span>
+            <button>Ver más</button>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- === CATALOGO DE VINOS SELECTOS === -->
-    <div id="catalogo-vinos" class="catalogo">
-        <div class="catalogo-header">
-            <h2>Vinos Selectos</h2>
-            <button id="cerrarCatalogo">X</button>
+    <div class="Historia" id="historia">
+      <br>
+      <br>
+      <div class="title">Nuestra <span class="accent">Historia</span></div>
+      <div class="subtitle">Más de dos décadas dedicados a ofrecer los mejores licores y vinos a nuestros clientes</div>
+      <br>
+      <div class="main">
+        <!-- IZQUIERDA: Texto principal -->
+        <div class="left">
+          <div class="section-title">Tradición y Calidad desde 1998</div>
+
+          <div class="text-panel" aria-label="Descripción de la empresa">
+            <p><strong>Licores Elegante</strong> nació de la pasión por los destilados finos y el deseo de compartir
+              experiencias únicas a través de bebidas excepcionales. Comenzamos como una pequeña tienda familiar y hemos
+              crecido hasta convertirnos en referente de calidad en la región.</p>
+
+            <p>Nuestro compromiso con la excelencia nos ha llevado a establecer relaciones directas con las mejores
+              bodegas y destilerías del mundo, garantizando que cada botella en nuestro catálogo cumpla con los más
+              altos estándares de calidad.</p>
+
+            <p>Creemos que cada ocasión merece ser celebrada con el licor perfecto, y nuestro equipo de expertos está
+              siempre disponible para guiarte en la elección ideal.</p>
+          </div>
+
+          <div class="mv-row">
+            <div class="mv">
+              <h4>Misión</h4>
+              <p>Ofrecer productos premium con un servicio excepcional, creando experiencias memorables para cada
+                cliente.</p>
+            </div>
+            <div class="mv">
+              <h4>Visión</h4>
+              <p>Ser la licorería de referencia, reconocida por nuestra experiencia y la calidad incomparable de
+                nuestros productos.</p>
+            </div>
+          </div>
+
+          <!-- Estadísticas inferiores -->
+          <div class="stats" style="margin-top:20px;">
+            <div class="stat">
+              <div class="icon">🏆</div>
+              <strong>25+</strong>
+              <small>Años de Experiencia</small>
+            </div>
+
+            <div class="stat">
+              <div class="icon">👥</div>
+              <strong>10k</strong>
+              <small>Clientes Satisfechos</small>
+            </div>
+
+            <div class="stat">
+              <div class="icon">🌐</div>
+              <strong>200+</strong>
+              <small>Marcas Disponibles</small>
+            </div>
+
+            <div class="stat">
+              <div class="icon">🎖️</div>
+              <strong>15</strong>
+              <small>Premios Recibidos</small>
+            </div>
+          </div>
         </div>
 
-        <div class="catalogo-grid">
-            <div class="vino-item">
-                <img src="img/vino1.jpg" alt="Vino Tinto Reserva">
-                <h3>Vino Tinto Reserva</h3>
-                <p>S/. 89</p>
+        <!-- DERECHA: Imagen y badge -->
+        <div class="right">
+          <div class="image-wrap" style="width:100%; position:relative;">
+            <!-- Badge (posicionada sobre la imagen) -->
+            <div class="badge" aria-hidden="true">
+              <div style="font-size:20px; font-weight:800;">25+</div>
+              <small>Años de<br>Experiencia</small>
             </div>
 
-            <div class="vino-item">
-                <img src="img/vino2.jpg" alt="Vino Blanco Chardonnay">
-                <h3>Vino Blanco Chardonnay</h3>
-                <p>S/. 75</p>
-            </div>
-
-            <div class="vino-item">
-                <img src="img/vino3.jpg" alt="Vino Rosado Premium">
-                <h3>Vino Rosado Premium</h3>
-                <p>S/. 82</p>
-            </div>
-
-            <div class="vino-item">
-                <img src="img/vino4.jpg" alt="Vino Tinto Malbec">
-                <h3>Vino Tinto Malbec</h3>
-                <p>S/. 95</p>
-            </div>
-
-            <div class="vino-item">
-                <img src="img/vino5.jpg" alt="Vino Espumante">
-                <h3>Vino Espumante</h3>
-                <p>S/. 110</p>
-            </div>
+            <!-- Imagen: actualizar ruta si es necesario -->
+            <img src="img/bodega.jpg" alt="Pasillo con botellas en licorería">
+          </div>
         </div>
-    </div>
-
-    <!-- === CATALOGO DE WHISKY PREMIUM === -->
-<div id="catalogo-whisky" class="catalogo">
-  <div class="catalogo-header">
-    <h2>Whisky Premium</h2>
-    <button id="cerrarCatalogoWhisky">X</button>
-  </div>
-
-  <div class="catalogo-grid">
-    <div class="vino-item">
-      <img src="img/whisky1.jpg" alt="Whisky Escocés 12 años">
-      <h3>Whisky Escocés 12 años</h3>
-      <p>S/. 180</p>
-    </div>
-
-    <div class="vino-item">
-      <img src="img/whisky2.jpg" alt="Whisky Irlandés Suave">
-      <h3>Whisky Irlandés Suave</h3>
-      <p>S/. 150</p>
-    </div>
-
-    <div class="vino-item">
-      <img src="img/whisky3.jpg" alt="Whisky Japonés Premium">
-      <h3>Whisky Japonés Premium</h3>
-      <p>S/. 210</p>
-    </div>
-
-    <div class="vino-item">
-      <img src="img/whisky4.jpg" alt="Whisky Americano Bourbon">
-      <h3>Whisky Americano Bourbon</h3>
-      <p>S/. 175</p>
-    </div>
-
-    <div class="vino-item">
-      <img src="img/whisky5.jpg" alt="Whisky Edición Limitada">
-      <h3>Whisky Edición Limitada</h3>
-      <p>S/. 250</p>
-    </div>
-  </div>
-</div>
-
-
-<!-- parte 3 de la categoria-->
-
-<div id="catalogo-Licores" class="catalogo">
-  <div class="catalogo-header">
-    <h2>Whisky Premium</h2>
-    <button id="cerrarCatalogoLicores">X</button>
-  </div>
-
-  <div class="catalogo-grid">
-    <div class="vino-item">
-      <img src="img/whisky1.jpg" alt="  Escocés 12 años">
-      <h3>Whisky Escocés 12 años</h3>
-      <p>S/. 180</p>
-    </div>
-
-    <div class="vino-item">
-      <img src="img/whisky2.jpg" alt="Whisky Irlandés Suave">
-      <h3>Whisky Irlandés Suave</h3>
-      <p>S/. 150</p>
-    </div>
-
-    <div class="vino-item">
-      <img src="img/whisky3.jpg" alt="Whisky Japonés Premium">
-      <h3>Whisky Japonés Premium</h3>
-      <p>S/. 210</p>
-    </div>
-
-    <div class="vino-item">
-      <img src="img/whisky4.jpg" alt="Whisky Americano Bourbon">
-      <h3>Whisky Americano Bourbon</h3>
-      <p>S/. 175</p>
-    </div>
-
-    <div class="vino-item">
-      <img src="img/whisky5.jpg" alt="Whisky Edición Limitada">
-      <h3>Whisky Edición Limitada</h3>
-      <p>S/. 250</p>
-    </div>
-  </div>
-</div>
-
-
-<!-- categoria 4-->
-
-<div id="catalogo-Cerveza" class="catalogo">
-  <div class="catalogo-header">
-    <h2>Whisky Premium</h2>
-    <button id="cerrarCatalogoCerveza">X</button>
-  </div>
-
-  <div class="catalogo-grid">
-    <div class="vino-item">
-      <img src="img/whisky1.jpg" alt="  Escocés 12 años">
-      <h3>Whisky Escocés 12 años</h3>
-      <p>S/. 180</p>
-    </div>
-
-    <div class="vino-item">
-      <img src="img/whisky2.jpg" alt="Whisky Irlandés Suave">
-      <h3>Whisky Irlandés Suave</h3>
-      <p>S/. 150</p>
-    </div>
-
-    <div class="vino-item">
-      <img src="img/whisky3.jpg" alt="Whisky Japonés Premium">
-      <h3>Whisky Japonés Premium</h3>
-      <p>S/. 210</p>
-    </div>
-
-    <div class="vino-item">
-      <img src="img/whisky4.jpg" alt="Whisky Americano Bourbon">
-      <h3>Whisky Americano Bourbon</h3>
-      <p>S/. 175</p>
-    </div>
-
-    <div class="vino-item">
-      <img src="img/whisky5.jpg" alt="Whisky Edición Limitada">
-      <h3>Whisky Edición Limitada</h3>
-      <p>S/. 250</p>
-    </div>
-  </div>
-</div>
-
-    <script src="./script.js"></script>
-  
- </body>
-
-
-
-  
-  
-<!-- Código de Visitanos y contactanos -->
-  <section class="contacto" id="contacto">
-  <h1>Visítanos o <span class="resaltado">Contáctanos</span></h1>
-  <p>Estamos aquí para ayudarte a encontrar el licor perfecto para cualquier ocasión</p>
-
-  <div class="container">
-    <!-- Columna izquierda -->
-    <div class="info_contacto">
-      <h2>Nuestra Tienda</h2>
-      <p><strong>Dirección:</strong> Av. Principal 1223, Centro Ciudad, CP 13224</p>
-      <p><strong>Teléfonos:</strong></p>
-      <ul class="telefonos">
-        <li>Principal: +51 982712812</li>
-        <li>WhatsApp: +51 937290293</li>
-      </ul>
-      <p><strong>Email:</strong> contacto@licorerialaultimacena.com</p>
-      <p><strong>Horarios:</strong> Lunes a Sábado: 10:00 a 22:00</p>
-      
-      <div class="mapa">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.000000000!2d-77.0000000!3d-12.0000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3ALaTienda!2sLicorería%20Elixir!5e0!3m2!1ses!2spe!4v0000000000000"
-          width="100%"
-          height="200"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy">
-        </iframe>
-      </div>
-    </div>
- <!-- Parte derecha -->
-<div class="formulario">
-  <h2>Envíanos un mensaje</h2>
-  
-  <form id="form-contacto">
-    <div class="form-row two-columns">
-      <div class="field">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" 
-        placeholder="Tu nombre" required>
       </div>
 
-      <div class="field">
-        <label for="apellido">Apellido</label>
-        <input type="text" id="apellido" name="apellido"
-         placeholder="Tu apellido" required>
-      </div>
-    </div>
-    
-    <div class="form-row">
-      <div class="field">
-        <label for="asunto">Asunto</label>
-        <input type="text" id="asunto" name="asunto" 
-        placeholder="Breve motivo del mensaje" required>
-      </div>
-    </div>
-    
-    <div class="form-row">
-      <div class="field">
-        <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" name="telefono" 
-        placeholder="+51 9XXXXXXXX" pattern="[\d +()-]{7,20}">
-      </div>
     </div>
 
-    <div class="form-row">
-      <div class="field">
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="4" 
-        placeholder="Escribe tu mensaje aquí..." required></textarea>
+    <!-- Código de Visitanos y contactanos -->
+    <section class="contacto" id="contacto">
+      <h1>Visítanos o <span class="resaltado">Contáctanos</span></h1>
+      <p>Estamos aquí para ayudarte a encontrar el licor perfecto para cualquier ocasión</p>
+
+      <div class="container">
+        <!-- Columna izquierda -->
+        <div class="info_contacto">
+          <h2>Nuestra Tienda</h2>
+          <p><strong>Dirección:</strong> Av. Principal 1223, Centro Ciudad, CP 13224</p>
+          <p><strong>Teléfonos:</strong></p>
+          <ul class="telefonos">
+            <li>Principal: +51 982712812</li>
+            <li>WhatsApp: +51 937290293</li>
+          </ul>
+          <p><strong>Email:</strong> contacto@licorerialaultimacena.com</p>
+          <p><strong>Horarios:</strong> Lunes a Sábado: 10:00 a 22:00</p>
+
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.000000000!2d-77.0000000!3d-12.0000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3ALaTienda!2sLicorería%20Elixir!5e0!3m2!1ses!2spe!4v0000000000000"
+              width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+        <!-- Parte derecha -->
+        <div class="formulario">
+          <h2>Envíanos un mensaje</h2>
+
+          <form id="form-contacto">
+            <div class="form-row two-columns">
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+              </div>
+
+              <div class="field">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto" placeholder="Breve motivo del mensaje" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+51 9XXXXXXXX" pattern="[\d +()-]{7,20}">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."
+                  required></textarea>
+              </div>
+            </div>
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
       </div>
-    </div>
-
-    <button type="submit">Enviar</button>
-  </form>
-</div>
-     </div>
-</section>
-
-  
+    </section>
+    <section>
+      <div class="creditos">
+        <p>© 2025 Licores Elegante | Todos los derechos reservados</p>
+        <div class="redes">
+          <a href="https://www.youtube.com/" target="_blank" title="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/51999999999" target="_blank" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Cargar íconos de Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"
+      crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
-
-
-
-
-
