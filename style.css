@@ -92,11 +92,33 @@ main {
 /* Fondo principal */
 .fondo_Inicio {
   background-image: url("img/fondo.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+  background-size: cover;          /* Se ajusta automáticamente */
+  background-position: center;     /* Centra la imagen */
+  background-repeat: no-repeat;    /* Evita repeticiones */
+  background-attachment: fixed;    /* Fondo fijo (opcional) */
+  min-height: 100vh;               /* Toda la altura visible */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
+  text-align: center;
+  position: relative;
+}
+
+/* 🔥 (opcional) filtro oscuro para resaltar texto */
+.fondo_Inicio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);  /* capa semitransparente */
+  z-index: 0;
+}
+
+/* 🔥 hace que tu contenido quede encima del filtro */
+.fondo_Inicio > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Encabezado */
@@ -1045,3 +1067,4 @@ p {
   color: #fff;
 
 }
+
