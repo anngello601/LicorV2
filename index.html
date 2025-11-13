@@ -106,69 +106,253 @@
   </div>
   <br>
   </div>
+
+
+  
+  
   <!-- Código de Nuestra categorias -->
-  <selection class="categoriasprimera" id="categoriasprimera">
-    <div class="titles" style="margin-top: 80px;">
-      <div class="Titulo">
-        <spam class="parte1">Nuestras</spam>
-        <span class="parte2">Categoria</span>
-      </div>
-      <p style="font-family: Arial, Helvetica, sans-serif;"> Explora nuestra cuidadosa selección organizada por
-        categorías, cada una con
-        productos de la más alta calidad</p>
-    </div>
+  <body>
+   
+    <!-- Sección principal de categorías -->
+    <section class="categoriasprimera">
+        <div class="titles" style="margin-top: 80px;">
+            <div class="Titulo">
+                <span class="parte1">Nuestras</span>
+                <span class="parte2">Categorías</span>
+            </div>
+            <p style="font-family: Arial, Helvetica, sans-serif;">
+                Explora nuestra cuidadosa selección organizada por categorías, cada una con productos de la más alta calidad.
+            </p>
+        </div>
 
-    <section class="categorias">
-      <div class="categoria">
-        <img src="img/img1.jpg" alt="Café">
-        <div class="contenido">
-          <h3>Vinos Selectos</h3>
-          <p>Tintos, blancos y rosados de las
-            mejores bodegas</p>
-          <div class="info">
-            <span>150+ productos</span>
-            <button>Ver más</button>
-          </div>
-        </div>
-      </div>
-      <div class="categoria">
-        <img src="img/d2.jpg" alt="Jugos Naturales">
-        <div class="contenido">
-          <h3>Whisky Premium</h3>
-          <p>Escoceses, irlandeses y bourbons
-            exclusivos</p>
-          <div class="info">
-            <span>85+ productos</span>
-            <button>Ver más</button>
-          </div>
-        </div>
-      </div>
-      <div class="categoria">
-        <img src="img/d33.jpg" alt="Cocteles">
-        <div class="contenido">
-          <h3>Licores Artesanales</h3>
-          <p>Destilados unicos y licores especiales</p>
-          <div class="info">
-            <span>120+ productos</span>
-            <button>Ver más</button>
-          </div>
-        </div>
-      </div>
+        <!-- === CATEGORÍAS === -->
+        <section class="categorias">
+            
+            <!-- Vinos Selectos -->
+            <div class="categoria">
+                <img src="img/img1.jpg" alt="Vinos Selectos">
+                <div class="contenido">
+                    <h3>Vinos Selectos</h3>
+                    <p>Tintos, blancos y rosados de las mejores bodegas</p>
+                    <div class="info">
+                        <span>150+ productos</span>
+                        <button id="verMasVinos">Ver más</button>
+                    </div>
+                </div>
+            </div>
 
-      <div class="categoria">
-        <img src="img/d4.jpg" alt="Refrescos">
-        <div class="contenido">
-          <h3>Cervezas Premium</h3>
-          <p>Artesanales, importadas y ediciones
-            limitadas</p>
-          <div class="info">
-            <span>200+ productos</span>
-            <button>Ver más</button>
-          </div>
-        </div>
-      </div>
+            
+            <!-- Whisky Premium -->
+            <div class="categoria">
+                <img src="img/d2.jpg" alt="Whisky Premium">
+                <div class="contenido">
+                    <h3>Whisky Premium</h3>
+                    <p>Escoceses, irlandeses y bourbons exclusivos</p>
+                    <div class="info">
+                        <span>85+ productos</span>
+                        <button id="verMasWhisky">Ver más</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Licores Artesanales -->
+            <div class="categoria">
+                <img src="img/d33.jpg" alt="Licores Artesanales">
+                <div class="contenido">
+                    <h3>Licores Artesanales</h3>
+                    <p>Destilados únicos y licores especiales</p>
+                    <div class="info">
+                        <span>120+ productos</span>
+                        <button id="verMasLicores">Ver más</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cervezas Premium -->
+            <div class="categoria">
+                <img src="img/d4.jpg" alt="Cervezas Premium">
+                <div class="contenido">
+                    <h3>Cervezas Premium</h3>
+                    <p>Artesanales, importadas y ediciones limitadas</p>
+                    <div class="info">
+                        <span>200+ productos</span>
+                        <button id="verMasCerveza">Ver más</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </section>
 
+    <!-- === CATALOGO DE VINOS SELECTOS === -->
+    <div id="catalogo-vinos" class="catalogo">
+        <div class="catalogo-header">
+            <h2>Vinos Selectos</h2>
+            <button id="cerrarCatalogo">X</button>
+        </div>
+
+        <div class="catalogo-grid">
+            <div class="vino-item">
+                <img src="img/vino1.jpg" alt="Vino Tinto Reserva">
+                <h3>Vino Tinto Reserva</h3>
+                <p>S/. 89</p>
+            </div>
+
+            <div class="vino-item">
+                <img src="img/vino2.jpg" alt="Vino Blanco Chardonnay">
+                <h3>Vino Blanco Chardonnay</h3>
+                <p>S/. 75</p>
+            </div>
+
+            <div class="vino-item">
+                <img src="img/vino3.jpg" alt="Vino Rosado Premium">
+                <h3>Vino Rosado Premium</h3>
+                <p>S/. 82</p>
+            </div>
+
+            <div class="vino-item">
+                <img src="img/vino4.jpg" alt="Vino Tinto Malbec">
+                <h3>Vino Tinto Malbec</h3>
+                <p>S/. 95</p>
+            </div>
+
+            <div class="vino-item">
+                <img src="img/vino5.jpg" alt="Vino Espumante">
+                <h3>Vino Espumante</h3>
+                <p>S/. 110</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- === CATALOGO DE WHISKY PREMIUM === -->
+<div id="catalogo-whisky" class="catalogo">
+  <div class="catalogo-header">
+    <h2>Whisky Premium</h2>
+    <button id="cerrarCatalogoWhisky">X</button>
+  </div>
+
+  <div class="catalogo-grid">
+    <div class="vino-item">
+      <img src="img/whisky1.jpg" alt="Whisky Escocés 12 años">
+      <h3>Whisky Escocés 12 años</h3>
+      <p>S/. 180</p>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/whisky2.jpg" alt="Whisky Irlandés Suave">
+      <h3>Whisky Irlandés Suave</h3>
+      <p>S/. 150</p>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/whisky3.jpg" alt="Whisky Japonés Premium">
+      <h3>Whisky Japonés Premium</h3>
+      <p>S/. 210</p>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/whisky4.jpg" alt="Whisky Americano Bourbon">
+      <h3>Whisky Americano Bourbon</h3>
+      <p>S/. 175</p>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/whisky5.jpg" alt="Whisky Edición Limitada">
+      <h3>Whisky Edición Limitada</h3>
+      <p>S/. 250</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- parte 3 de la categoria-->
+
+<div id="catalogo-Licores" class="catalogo">
+  <div class="catalogo-header">
+    <h2>Whisky Premium</h2>
+    <button id="cerrarCatalogoLicores">X</button>
+  </div>
+
+  <div class="catalogo-grid">
+    <div class="vino-item">
+      <img src="img/whisky1.jpg" alt="  Escocés 12 años">
+      <h3>Whisky Escocés 12 años</h3>
+      <p>S/. 180</p>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/whisky2.jpg" alt="Whisky Irlandés Suave">
+      <h3>Whisky Irlandés Suave</h3>
+      <p>S/. 150</p>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/whisky3.jpg" alt="Whisky Japonés Premium">
+      <h3>Whisky Japonés Premium</h3>
+      <p>S/. 210</p>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/whisky4.jpg" alt="Whisky Americano Bourbon">
+      <h3>Whisky Americano Bourbon</h3>
+      <p>S/. 175</p>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/whisky5.jpg" alt="Whisky Edición Limitada">
+      <h3>Whisky Edición Limitada</h3>
+      <p>S/. 250</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- categoria 4-->
+
+<div id="catalogo-Cerveza" class="catalogo">
+  <div class="catalogo-header">
+    <h2>Whisky Premium</h2>
+    <button id="cerrarCatalogoCerveza">X</button>
+  </div>
+
+  <div class="catalogo-grid">
+    <div class="vino-item">
+      <img src="img/whisky1.jpg" alt="  Escocés 12 años">
+      <h3>Whisky Escocés 12 años</h3>
+      <p>S/. 180</p>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/whisky2.jpg" alt="Whisky Irlandés Suave">
+      <h3>Whisky Irlandés Suave</h3>
+      <p>S/. 150</p>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/whisky3.jpg" alt="Whisky Japonés Premium">
+      <h3>Whisky Japonés Premium</h3>
+      <p>S/. 210</p>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/whisky4.jpg" alt="Whisky Americano Bourbon">
+      <h3>Whisky Americano Bourbon</h3>
+      <p>S/. 175</p>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/whisky5.jpg" alt="Whisky Edición Limitada">
+      <h3>Whisky Edición Limitada</h3>
+      <p>S/. 250</p>
+    </div>
+  </div>
+</div>
+
+    <script src="./script.js"></script>
+</body>
+<!-- fiN PARTE DE CATEGORIAS ---------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- PARTE DE HISTORIA {-------------------------------------------------------------------------------------------------------------------- -->
     <div class="Historia" id="historia">
       <br>
       <br>
@@ -250,6 +434,8 @@
       </div>
 
     </div>
+
+    <!-- FIN PARTE DE HISTORIA {-------------------------------------------------------------------------------------------------------------------- -->
 
     <!-- Código de Visitanos y contactanos -->
     <section class="contacto" id="contacto">
@@ -342,5 +528,6 @@
     <script src="script.js"></script>
     <script src="app.js"></script>
 </body>
+
 
 </html>
