@@ -22,7 +22,7 @@ const menuToggle = document.getElementById("menu-toggle");
 
   });
 
-// PARTE DE CATEGORIAS // 
+// PARTE DE CATEGORIAS --------------------------------------------------------------------------------------------------------------------------------------------- // 
 
 const btnVinos = document.getElementById('verMasVinos');
 const catalogoVinos = document.getElementById('catalogo-vinos');
@@ -88,3 +88,4 @@ cerrarCatalogoCerveza.addEventListener('click', () => {
   catalogoCerveza.style.display = 'none';
   document.body.style.overflow = 'auto';
 });
+
