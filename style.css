@@ -636,67 +636,71 @@ button:hover {
 
 
 
-
-
-* {
-  margin: 0;
-  padding: 40;
-  box-sizing: border-box;
+/* PARTE DE LAS CATEGORIAS -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+*{
+    margin: 0;
+    padding: 40;
+    box-sizing: border-box;
 }
 
-.hero {
-  height: 100vh;
-
+.hero{
+    height: 100vh;
 
 }
 
-.categoriasprimera {
-  padding: 10rem;
-  padding-top: 1;
+.categoriasprimera{
+
+    padding:10rem;
+    padding-top:1;
+    
+
 }
 
 .titles {
-  text-align: center;
-  padding-inline: 8rem;
-  gap: 50rem;
+    text-align: center;
+    padding-inline: 8rem;
+    gap: 50rem;
 }
 
 
 .Titulo {
-  font-family: Arial, sans-serif;
+font-family: Arial, sans-serif;
   font-weight: bold;
   margin: 0;
   gap: 50rem;
   margin-bottom: 20px;
 
 }
-
 .parte1 {
-  color: #000000;
+  color: #000000; 
   font-size: 45px;
 }
-
 .parte2 {
-  color: #D97706;
-
+  color: #D97706; 
+  
   font-size: 45px;
 
 }
 
-p {
+
+
+p{
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 35px;
 }
 
+
+
 .categorias {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 100px 20px;
+  justify-content: center;  
+  align-items: center;     
+  flex-wrap: wrap;           
+  gap: 40px;                 
+  padding: 100px 20px;       
   background-color: #f8f8f8;
 }
+
 
 .categoria {
   position: relative;
@@ -704,7 +708,7 @@ p {
   height: 300px;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s;
 }
 
@@ -723,7 +727,7 @@ p {
 
 .categoria .contenido {
   position: absolute;
-  top: 30%;
+  top: 30%;                
   left: 0;
   color: white;
   padding: 15px;
@@ -870,8 +874,25 @@ p {
 }
 
 
+/* ESTA PARTE ES PARA EL BOTOOM*/
 
 
+/* PARTE 1 */
+.BOTOOM2 {
+  background-color: #ff7b00;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+
+
+
+/* final parte de categoria ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Historia */
 .Historia {
   background: linear-gradient(180deg, #0b1114 0%, #1f2933 100%);
@@ -1070,5 +1091,6 @@ p {
   color: #fff;
 
 }
+
 
 
