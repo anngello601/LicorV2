@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Última Cena - Licores</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="producto.css">
+</head>
+
+<body>
+  <div class="espacio-header"></div>
+  <div id="loader">
+    <div class="loader-content">
+      <h1>Bienvenido a la Licorería</h1>
+      <img id="imgLogo" width="300" src="img/logo.jpg" alt="Logo La Última Cena" class="loader-logo">
+      <h2>La Última Cena</h2>
+    </div>
+  </div>
+  <header class="navbar">
+  <div class="logo">Licores</div>
+
+  <!-- Botón -->
+  <button class="menu-toggle" id="menu-toggle">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#ProductoDestacado">Productos Destacados</a></li>
+    <li><a href="#categoriasprimera">Catálogo</a></li>
+    <li><a href="#historia">Sobre Nosotros</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#" class="llamar">Llamar</a></li>
+    <li><button class="carrito" id="btnCarritoNavbar">Carrito</button></li>
+
+  </ul>
+</header>
+  </header>
+
+  <main class="fondo_Inicio" id="inicio">
+    <section class="inicio">
+      <h2 class="subtitulo">Licores</h2>
+      <h1 class="titulo">La última<span>Cena</span></h1>
+      <p class="descripcion">
+        Descubre nuestra selección premium de vinos, whisky, licores y cervezas artesanales.
+        Curada por expertos para los paladares más exigentes.
+      </p>
+      <div class="botones">
+        <button class="btn1">Ver Catálogo</button>
+        <button class="btn2">Conoce nuestra Historia</button>
+      </div>
+    </section>
+    <section class="caracteristicas">
+      <div>Entrega rápida</div>
+      <div>Calidad premium</div>
+      <div>Ubicación central</div>
+    </section>
+  </main>
+   <!-- Código de Nuestra categorias -->
+  
+   
+    <!-- Sección principal de categorías -->
+    <section class="categoriasprimera">
+        <div class="titles" style="margin-top: 80px;">
+            <div class="Titulo">
+                <span class="parte1">Nuestras</span>
+                <span class="parte2">Categorías</span>
+            </div>
+            <p style="font-family: Arial, Helvetica, sans-serif;">
+                Explora nuestra cuidadosa selección organizada por categorías, cada una con productos de la más alta calidad.
+            </p>
+        </div>
+
+        <!-- === CATEGORÍAS === -->
+        <section class="categorias">
+            
+            <!-- Vinos Selectos -->
+            <div class="categoria">
+                <img src="img/img1.jpg" alt="Vinos Selectos">
+                <div class="contenido">
+                    <h3>Vinos Selectos</h3>
+                    <p>Tintos, blancos y rosados de las mejores bodegas</p>
+                    <div class="info">
+                        <span>150+ productos</span>
+                        <button id="verMasVinos">Ver más</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- Whisky Premium -->
+            <div class="categoria">
+                <img src="img/d2.jpg" alt="Whisky Premium">
+                <div class="contenido">
+                    <h3>Whisky Premium</h3>
+                    <p>Escoceses, irlandeses y bourbons exclusivos</p>
+                    <div class="info">
+                        <span>85+ productos</span>
+                        <button id="verMasWhisky">Ver más</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Licores Artesanales -->
+            <div class="categoria">
+                <img src="img/d33.jpg" alt="Licores Artesanales">
+                <div class="contenido">
+                    <h3>Licores Artesanales</h3>
+                    <p>Destilados únicos y licores especiales</p>
+                    <div class="info">
+                        <span>120+ productos</span>
+                        <button id="verMasLicores">Ver más</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cervezas Premium -->
+            <div class="categoria">
+                <img src="img/d4.jpg" alt="Cervezas Premium">
+                <div class="contenido">
+                    <h3>Cervezas Premium</h3>
+                    <p>Artesanales, importadas y ediciones limitadas</p>
+                    <div class="info">
+                        <span>200+ productos</span>
+                        <button id="verMasCerveza">Ver más</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+    <div class="ProductoDestacado" id="ProductoDestacado" ">
+    <br>
+    <br>
+    <br>
+    <h1 style=" text-align: center;">Nuestros</h1>
+    <h1 style="text-align: center; color: orange;">Productos Destacados</h1>
+    <h2 style="text-align: center;">Una selección especial de nuestros licores más exclusivos y populares.</h2>
+    <br>
+
+    <div id="CategoriasVinos">
+      <div class="producto">
+        <div class="producto-imagen-container">
+          <img src="img/2 VINO.jpg" alt="Vino">
+          <div class="producto-texto">
+            <h4 class="producto-subtitulo">Vinos Selectos </h4>
+            <h4>Vino Chenin Blanc </h4>
+            <p class="producto-descripcion">Un vino tinto reserva con notas afrutadas.</p>
+            <div class="producto-estrellas">
+              <span>⭐⭐⭐⭐☆</span>
+              <span class="rating-text">4.8(149 reseñas)</span>
+            </div>
+            <p><strong>Precio: S/.85</strong></p>
+          </div>
+        </div>
+        <button class="cart" onclick="agregarAlCarrito('Vino Chenin Blanc', 85, 'img/2 VINO.jpg')">Añadir al Carrito</button>
+      </div>
+
+      <div class="producto">
+        <div class="producto-imagen-container">
+          <img src="img/1 VINO.jpg" alt="Whisky Macallan 18 años">
+          <div class="producto-texto">
+             <h4 class="producto-subtitulo">Whisky Premium </h4>
+            <h3>Whisky Macallan 18 años</h3>
+            <p class="producto-descripcion">Whisky escocés de 18 años, una joya para conocedores.</p>
+            <div class="producto-estrellas">
+              <span>⭐⭐⭐⭐☆</span>
+              <span class="rating-text">4.8(149 reseñas)</span>
+            </div>
+            <p><strong>Precio: S/.450</strong></p>
+          </div>
+        </div>
+        <button class="cart" onclick="agregarAlCarrito('Whisky Macallan 18 años', 450, 'img/1 VINO.jpg')">Añadir al Carrito</button>
+      </div>
+
+      <div class="producto">
+        <div class="producto-imagen-container">
+          <img src="img/3 VINO.jpg" alt="Licor Exclusivo">
+          <div class="producto-texto">
+             <h4 class="producto-subtitulo">Licores Exclusivos </h4>
+            <h3>Rémy Martin Louis XIII </h3>
+            <p class="producto-descripcion">Licor de hierbas único, destilado de forma tradicional.</p>
+            <div class="producto-estrellas">
+              <span>⭐⭐⭐⭐☆</span>
+              <span class="rating-text">4.6(120 reseñas)</span>
+            </div>
+            <p><strong>Precio: S/.195</strong></p>
+          </div>
+        </div>
+        <button class="cart" onclick="agregarAlCarrito('Rémy Martin Louis XIII', 195, 'img/3 VINO.jpg')">Añadir al Carrito</button>
+      </div>
+    </div>
+    <br>
+    <div>
+      <button id="verTodosLosProductos" class="ver-mas-btn">VER TODOS LOS PRODUCTOS</button>
+    </div>
+  </div>
+  <br>
+  </div>
+
+    <!-- === CATALOGO DE VINOS SELECTOS === -->
+
+<div id="catalogo-vinos" class="catalogo">
+    <div class="catalogo-header">
+        <h2>Vinos Selectos</h2>
+        <button id="cerrarCatalogo">Volver</button>
+    </div>
+
+    <div class="catalogo-grid">
+        <div class="vino-item">
+            <img src="img/VINO1.D.jpg" alt="Brunello di Montalcino D.O.C.G.">
+            <h3>Brunello di Montalcino D.O.C.G.</h3>
+            <p>S/. 436</p>
+            <button class="BOTOOM2"
+                onclick="agregarAlCarrito('Brunello di Montalcino D.O.C.G.', 436, 'img/VINO1.D.jpg')">
+                Añadir
+            </button>
+        </div>
+
+        <div class="vino-item">
+            <img src="img/vino4.png" alt="Viña Zorzal Garnacha 2021">
+            <h3>Viña Zorzal Garnacha 2021</h3>
+            <p>S/. 89</p>
+            <button class="BOTOOM2"
+                onclick="agregarAlCarrito('Viña Zorzal Garnacha 2021', 89, 'img/vino4.png')">
+               Añadir
+            </button>
+        </div>
+
+        <div class="vino-item">
+            <img src="img/vino3.png" alt="El Enemigo Chardonnay 2022">
+            <h3>El Enemigo Chardonnay 2022</h3>
+            <p>S/. 82</p>
+            <button class="BOTOOM2"
+                onclick="agregarAlCarrito('El Enemigo Chardonnay 2022', 82, 'img/vino3.png')">
+                Añadir
+            </button>
+        </div>
+
+        <div class="vino-item">
+            <img src="img/vino5.jpeg" alt="Can Sumoi Perfum 2023">
+            <h3>Can Sumoi Perfum 2023</h3>
+            <p>S/. 95</p>
+            <button class="BOTOOM2"
+                onclick="agregarAlCarrito('Can Sumoi Perfum 2023', 95, 'img/vino5.jpeg')">
+                Añadir
+            </button>
+        </div>
+
+        <div class="vino-item">
+            <img src="img/vino2.png" alt="altos las hormigas malbec terroir 2021">
+            <h3>Altos las hormigas malbec terroir 2021</h3>
+            <p>S/. 110</p>
+            <button class="BOTOOM2"
+                onclick="agregarAlCarrito('Altos las hormigas malbec terroir 2021', 110, 'img/vino2.png')">
+                Añadir
+            </button>
+        </div>
+    </div>
+</div>
+
+ <!-- === CATALOGO DE WHISKY=== -->
+
+<div id="catalogo-whisky" class="catalogo">
+  <div class="catalogo-header">
+
+    <h2>Whisky Premium</h2>
+     <button id="cerrarCatalogoWhisky">Volver</button>
+    
+  </div>
+
+  <div class="catalogo-grid">
+
+    <div class="vino-item">
+      <img src="img/w1.jpg" alt="Uncle Nearest 1856">
+      <h3>Uncle Nearest 1856</h3>
+      <p>S/. 250</p>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Uncle Nearest 1856', 250, 'img/w1.jpg')">
+        Añadir
+      </button>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/w2.png" alt="Yamazaki">
+      <h3>Yamazaki</h3>
+      <p>S/. 1600</p>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Yamazaki', 1600, 'img/w2.png')">
+        Añadir
+      </button>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/w3.jpg" alt="Johnnie Walker Blue Label">
+      <h3>Johnnie Walker Blue Label</h3>
+      <p>S/. 2000</p>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Johnnie Walker Blue Label', 2000, 'img/w3.jpg')">
+        Añadir
+      </button>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/w4.jpg" alt="Jack Daniel’s Single Barrel 100 Proof">
+      <h3>Jack Daniel’s Single Barrel 100 Proof</h3>
+      <p>S/. 300</p>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Jack Daniel’s Single Barrel 100 Proof', 300, 'img/w4.jpg')">
+        Añadir
+      </button>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/w5.png" alt="Glenfiddich Grand Cru 23 años">
+      <h3>Glenfiddich Grand Cru 23 años</h3>
+      <p>S/. 2000</p>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Glenfiddich Grand Cru 23 años', 2000, 'img/w5.png')">
+        Añadir
+      </button>
+    </div>
+
+  </div>
+</div>
+
+ <!-- === CATALOGO DE lICORES === -->
+
+<div id="catalogo-Licores" class="catalogo">
+  <div class="catalogo-header">
+    <h2>Licores Artesanales</h2>
+    <button id="cerrarCatalogoLicores">Volver</button>
+  </div>
+
+  <div class="catalogo-grid">
+
+    <div class="vino-item">
+      <img src="img/Licores.jpg" alt="Barranco Beer Company">
+      <h3>Barranco Beer Company</h3>
+      <p>S/. 25</p>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Barranco Beer Company', 25, 'img/Licores.jpg')">
+        Añadir
+      </button>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/Licores2.png" alt="Licor Sierra Andina">
+      <h3>Licor Sierra Andina</h3>
+      <p>S/. 12</p>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Licor Sierra Andina', 12, 'img/Licores2.png')">
+        Añadir
+      </button>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/licores3.jpg" alt="Strong Ale">
+      <h3>Strong Ale</h3>
+      <p>S/. 16</p>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Strong Ale', 16, 'img/licores3.jpg')">
+        Añadir
+      </button>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/LICOR4D.jpg" alt="Gin Amazonian">
+      <h3>Gin Amazonian</h3>
+      <p>S/. 132</p>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Gin Amazonian', 132, 'img/LICOR4D.jpg')">
+        Añadir
+      </button>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/licor5.jpg" alt="Miskimuña">
+      <h3>Miskimuña</h3>
+      <p>S/. 36</p>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Miskimuña', 36, 'img/licor5.jpg')">
+        Añadir
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+ <!-- === CATALOGO DE CERVEZA=== -->
+
+<div id="catalogo-Cerveza" class="catalogo">
+  <div class="catalogo-header">
+    <h2>Cerveza Premium</h2>
+    <button id="cerrarCatalogoCerveza">Volver</button>
+  </div>
+
+  <div class="catalogo-grid">
+
+    <div class="vino-item">
+      <img src="img/cerveza1.png" alt="Stella Artois">
+      <h3>Stella Artois</h3>
+      <p>S/. 180</p>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Stella Artois', 180, 'img/cerveza1.png')">
+        Añadir
+      </button>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/cerveza2.jpg" alt="Heineken">
+      <h3>Heineken</h3>
+      <p>S/. 150</p>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Heineken', 150, 'img/cerveza2.jpg')">
+        Añadir
+      </button>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/cerveza3.jpg" alt="Corona Extra">
+      <h3>Corona Extra</h3>
+      <p>S/. 210</p>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Corona Extra', 210, 'img/cerveza3.jpg')">
+        Añadir
+      </button>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/cerveza4.jpg" alt="Guinness Draught">
+      <h3>Guinness Draught</h3>
+      <p>S/. 175</p>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Guinness Draught', 175, 'img/cerveza4.jpg')">
+        Añadir
+      </button>
+    </div>
+
+    <div class="vino-item">
+      <img src="img/cerveza5.jpg" alt="Warsteiner Premium Verum">
+      <h3>Warsteiner Premium Verum</h3>
+      <p>S/. 250</p>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Warsteiner Premium Verum', 250, 'img/cerveza5.jpg')">
+        Añadir
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+    <!-- CARRITO SIDEBAR -->
+<div id="carritoSidebar" class="carrito-sidebar">
+    <div class="carrito-header">
+        <h2>Mi Carrito</h2>
+        <span id="cerrarCarrito" class="cerrar-carrito">&times;</span>
+    </div>
+
+    <div id="listaCarrito" class="carrito-items"></div>
+
+    <div class="carrito-footer">
+        <p>Total: S/ <span id="carritoTotal">0.00</span></p>
+        <button id="btnComprar" class="btn-comprar">Comprar</button>
+    </div>
+</div>
+
+<!-- BOTÓN PARA ABRIR EL CARRITO -->
+<div id="btnAbrirCarrito" class="btn-abrir-carrito">
+    🛒
+</div>
+
+<!-- POPUP DE PRODUCTO AÑADIDO -->
+<div id="popupCarrito" class="popup-carrito">
+    <div class="popup-content">
+        <span class="popup-close">×</span>
+
+        <div class="popup-icon">✔</div>
+
+        <h3 id="popupCantidad">1 producto</h3>
+        <p>fue añadido a su cesta</p>
+
+        <button id="btnVerCarrito" class="popup-btn">Editar Carrito</button>
+    </div>
+</div>
+
+
+<!-- IMPORTAR CARRITO -->
+<script src="carrito.js"></script>
+
+
+
+<!-- fiN PARTE DE CATEGORIAS ---------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- === CATALOGO DE TODOS LOS PRODUCTOS === -->
+    <div id="todos-los-productos" class="catalogo">
+        <div class="catalogo-header">
+            <h2>Todos los Productos</h2>
+            <button id="cerrarTodosLosProductos">Volver</button>
+        </div>
+        <div class="catalogo-grid">
+            <!-- Vinos -->
+            <div class="vino-item">
+                <img src="img/VINO1.D.jpg" alt="Brunello di Montalcino D.O.C.G.">
+                <h3>Brunello di Montalcino D.O.C.G.</h3>
+                <p>S/. 436</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Brunello di Montalcino D.O.C.G.', 436, 'img/VINO1.D.jpg')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/vino4.png" alt="Viña Zorzal Garnacha 2021">
+                <h3>Viña Zorzal Garnacha 2021</h3>
+                <p>S/. 89</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Viña Zorzal Garnacha 2021', 89, 'img/vino4.png')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/vino3.png" alt="El Enemigo Chardonnay 2022">
+                <h3>El Enemigo Chardonnay 2022</h3>
+                <p>S/. 82</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('El Enemigo Chardonnay 2022', 82, 'img/vino3.png')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/vino5.jpeg" alt="Can Sumoi Perfum 2023">
+                <h3>Can Sumoi Perfum 2023</h3>
+                <p>S/. 95</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Can Sumoi Perfum 2023', 95, 'img/vino5.jpeg')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/vino2.png" alt="altos las hormigas malbec terroir 2021">
+                <h3>Altos las hormigas malbec terroir 2021</h3>
+                <p>S/. 110</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Altos las hormigas malbec terroir 2021', 110, 'img/vino2.png')">Añadir</button>
+            </div>
+            <!-- Whisky -->
+            <div class="vino-item">
+                <img src="img/w1.jpg" alt="Uncle Nearest 1856">
+                <h3>Uncle Nearest 1856</h3>
+                <p>S/. 250</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Uncle Nearest 1856', 250, 'img/w1.jpg')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/w2.png" alt="Yamazaki">
+                <h3>Yamazaki</h3>
+                <p>S/. 1600</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Yamazaki', 1600, 'img/w2.png')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/w3.jpg" alt="Johnnie Walker Blue Label">
+                <h3>Johnnie Walker Blue Label</h3>
+                <p>S/. 2000</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Johnnie Walker Blue Label', 2000, 'img/w3.jpg')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/w4.jpg" alt="Jack Daniel’s Single Barrel 100 Proof">
+                <h3>Jack Daniel’s Single Barrel 100 Proof</h3>
+                <p>S/. 300</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Jack Daniel’s Single Barrel 100 Proof', 300, 'img/w4.jpg')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/w5.png" alt="Glenfiddich Grand Cru 23 años">
+                <h3>Glenfiddich Grand Cru 23 años</h3>
+                <p>S/. 2000</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Glenfiddich Grand Cru 23 años', 2000, 'img/w5.png')">Añadir</button>
+            </div>
+            <!-- Licores -->
+            <div class="vino-item">
+                <img src="img/Licores.jpg" alt="Barranco Beer Company">
+                <h3>Barranco Beer Company</h3>
+                <p>S/. 25</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Barranco Beer Company', 25, 'img/Licores.jpg')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/Licores2.png" alt="Licor Sierra Andina">
+                <h3>Licor Sierra Andina</h3>
+                <p>S/. 12</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Licor Sierra Andina', 12, 'img/Licores2.png')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/licores3.jpg" alt="Strong Ale">
+                <h3>Strong Ale</h3>
+                <p>S/. 16</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Strong Ale', 16, 'img/licores3.jpg')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/LICOR4D.jpg" alt="Gin Amazonian">
+                <h3>Gin Amazonian</h3>
+                <p>S/. 132</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Gin Amazonian', 132, 'img/LICOR4D.jpg')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/licor5.jpg" alt="Miskimuña">
+                <h3>Miskimuña</h3>
+                <p>S/. 36</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Miskimuña', 36, 'img/licor5.jpg')">Añadir</button>
+            </div>
+            <!-- Cervezas -->
+            <div class="vino-item">
+                <img src="img/cerveza1.png" alt="Stella Artois">
+                <h3>Stella Artois</h3>
+                <p>S/. 180</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Stella Artois', 180, 'img/cerveza1.png')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/cerveza2.jpg" alt="Heineken">
+                <h3>Heineken</h3>
+                <p>S/. 150</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Heineken', 150, 'img/cerveza2.jpg')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/cerveza3.jpg" alt="Corona Extra">
+                <h3>Corona Extra</h3>
+                <p>S/. 210</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Corona Extra', 210, 'img/cerveza3.jpg')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/cerveza4.jpg" alt="Guinness Draught">
+                <h3>Guinness Draught</h3>
+                <p>S/. 175</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Guinness Draught', 175, 'img/cerveza4.jpg')">Añadir</button>
+            </div>
+            <div class="vino-item">
+                <img src="img/cerveza5.jpg" alt="Warsteiner Premium Verum">
+                <h3>Warsteiner Premium Verum</h3>
+                <p>S/. 250</p>
+                <button class="BOTOOM2" onclick="agregarAlCarrito('Warsteiner Premium Verum', 250, 'img/cerveza5.jpg')">Añadir</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+    <script src="carrito.js"></script>
+
+    <!-- PARTE DE HISTORIA {-------------------------------------------------------------------------------------------------------------------- -->
+    <div class="Historia" id="historia">
+      <br>
+      <br>
+      <div class="title">Nuestra <span class="accent">Historia</span></div>
+      <div class="subtitle">Más de dos décadas dedicados a ofrecer los mejores licores y vinos a nuestros clientes</div>
+      <br>
+      <div class="main">
+        <!-- IZQUIERDA: Texto principal -->
+        <div class="left">
+          <div class="section-title">Tradición y Calidad desde 1998</div>
+
+          <div class="text-panel" aria-label="Descripción de la empresa">
+            <p><strong>Licores Elegante</strong> nació de la pasión por los destilados finos y el deseo de compartir
+              experiencias únicas a través de bebidas excepcionales. Comenzamos como una pequeña tienda familiar y hemos
+              crecido hasta convertirnos en referente de calidad en la región.</p>
+
+            <p>Nuestro compromiso con la excelencia nos ha llevado a establecer relaciones directas con las mejores
+              bodegas y destilerías del mundo, garantizando que cada botella en nuestro catálogo cumpla con los más
+              altos estándares de calidad.</p>
+
+            <p>Creemos que cada ocasión merece ser celebrada con el licor perfecto, y nuestro equipo de expertos está
+              siempre disponible para guiarte en la elección ideal.</p>
+          </div>
+
+          <div class="mv-row">
+            <div class="mv">
+              <h4>Misión</h4>
+              <p>Ofrecer productos premium con un servicio excepcional, creando experiencias memorables para cada
+                cliente.</p>
+            </div>
+            <div class="mv">
+              <h4>Visión</h4>
+              <p>Ser la licorería de referencia, reconocida por nuestra experiencia y la calidad incomparable de
+                nuestros productos.</p>
+            </div>
+          </div>
+
+          <!-- Estadísticas inferiores -->
+          <div class="stats" style="margin-top:20px;">
+            <div class="stat">
+              <div class="icon">🏆</div>
+              <strong>25+</strong>
+              <small>Años de Experiencia</small>
+            </div>
+
+            <div class="stat">
+              <div class="icon">👥</div>
+              <strong>10k</strong>
+              <small>Clientes Satisfechos</small>
+            </div>
+
+            <div class="stat">
+              <div class="icon">🌐</div>
+              <strong>200+</strong>
+              <small>Marcas Disponibles</small>
+            </div>
+
+            <div class="stat">
+              <div class="icon">🎖️</div>
+              <strong>15</strong>
+              <small>Premios Recibidos</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- DERECHA: Imagen y badge -->
+        <div class="right">
+          <div class="image-wrap" style="width:100%; position:relative;">
+            <!-- Badge (posicionada sobre la imagen) -->
+            <div class="badge" aria-hidden="true">
+              <div style="font-size:20px; font-weight:800;">25+</div>
+              <small>Años de<br>Experiencia</small>
+            </div>
+
+            <!-- Imagen: actualizar ruta si es necesario -->
+            <img src="img/bodega.jpg" alt="Pasillo con botellas en licorería">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FIN PARTE DE HISTORIA {-------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- Código de Visitanos y contactanos -->
+    <section class="contacto" id="contacto">
+      <h1>Visítanos o <span class="resaltado">Contáctanos</span></h1>
+      <p>Estamos aquí para ayudarte a encontrar el licor perfecto para cualquier ocasión</p>
+
+      <div class="container">
+        <!-- Columna izquierda -->
+        <div class="info_contacto">
+          <h2>Nuestra Tienda</h2>
+          <p><strong>Dirección:</strong> Av. Principal 1223, Centro Ciudad, CP 13224</p>
+          <p><strong>Teléfonos:</strong></p>
+          <ul class="telefonos">
+            <li>Principal: +51 982712812</li>
+            <li>WhatsApp: +51 937290293</li>
+          </ul>
+          <p><strong>Email:</strong> contacto@licorerialaultimacena.com</p>
+          <p><strong>Horarios:</strong> Lunes a Sábado: 10:00 a 22:00</p>
+
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.000000000!2d-77.0000000!3d-12.0000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3ALaTienda!2sLicorería%20Elixir!5e0!3m2!1ses!2spe!4v0000000000000"
+              width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+        <!-- Parte derecha -->
+        <div class="formulario">
+          <h2>Envíanos un mensaje</h2>
+
+          <form id="form-contacto">
+            <div class="form-row two-columns">
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+              </div>
+
+              <div class="field">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto" placeholder="Breve motivo del mensaje" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+51 9XXXXXXXX" pattern="[\d +()-]{7,20}">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."
+                  required></textarea>
+              </div>
+            </div>
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="creditos">
+        <p>© 2025 Licores Elegante | Todos los derechos reservados</p>
+        <div class="redes">
+          <a href="https://www.youtube.com/" target="_blank" title="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/51999999999" target="_blank" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <div id="alerta-exito" class="alerta">
+  ¡Mensaje enviado correctamente!
+</div>
+
+<script>
+document.getElementById("form-contacto").addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    const alerta = document.getElementById("alerta-exito");
+    alerta.classList.add("mostrar");
+
+    setTimeout(() => {
+        alerta.classList.remove("mostrar");
+    }, 3000);
+
+    this.reset();
+});
+</script>
+    <!-- Cargar íconos de Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"
+      crossorigin="anonymous"></script>
+</body>
+
+
+</html>
