@@ -22,6 +22,16 @@ const menuToggle = document.getElementById("menu-toggle");
 
   });
 
+  // Mostrar botón de carrito solo después del loader
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    const btnCarrito = document.getElementById("btnAbrirCarrito");
+    if (btnCarrito) btnCarrito.style.display = "flex";
+  }, 4000); // 3000 del delay + 1000 del fade out
+});
+
+  
+
 // PARTE DE CATEGORIAS --------------------------------------------------------------------------------------------------------------------------------------------- // 
 
 const btnVinos = document.getElementById('verMasVinos');
@@ -88,4 +98,6 @@ cerrarCatalogoCerveza.addEventListener('click', () => {
   catalogoCerveza.style.display = 'none';
   document.body.style.overflow = 'auto';
 });
+
+
 

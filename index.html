@@ -22,7 +22,7 @@
   <header class="navbar">
   <div class="logo">Licores</div>
 
-  <!-- Botón de hamburguesa -->
+  <!-- Botón -->
   <button class="menu-toggle" id="menu-toggle">
     <i class="fa-solid fa-bars"></i>
   </button>
@@ -34,15 +34,16 @@
     <li><a href="#historia">Sobre Nosotros</a></li>
     <li><a href="#contacto">Contacto</a></li>
     <li><a href="#" class="llamar">Llamar</a></li>
-    <li><button class="carrito">Carrito</button></li>
+    <li><button class="carrito" id="btnCarritoNavbar">Carrito</button></li>
+
   </ul>
 </header>
   </header>
 
   <main class="fondo_Inicio" id="inicio">
     <section class="inicio">
-      <h2 class="subtitulo">LICORES</h2>
-      <h1 class="titulo">La última <span>Cena</span></h1>
+      <h2 class="subtitulo">Licores</h2>
+      <h1 class="titulo">La última<span>Cena</span></h1>
       <p class="descripcion">
         Descubre nuestra selección premium de vinos, whisky, licores y cervezas artesanales.
         Curada por expertos para los paladares más exigentes.
@@ -58,61 +59,12 @@
       <div>Ubicación central</div>
     </section>
   </main>
-  <div class="ProductoDestacado" id="ProductoDestacado" ">
-    <br>
-    <br>
-    <br>
-    <h1 style=" text-align: center;">Nuestros</h1>
-    <h1 style="text-align: center; color: orange;">Productos Destacados</h1>
-    <h2 style="text-align: center;">Una selección especial de nuestros licores más exclusivos y populares.</h2>
-    <br>
-
-    <div id="CategoriasVinos">
-      <div class="producto">
-        <h3>Vino</h3>
-        <p>Un vino tinto reserva con notas afrutadas.</p>
-        <img src="img/vino.jpg" alt="Vino">
-        <p><strong>Precio: S/.85</strong></p>
-        <button class="add-to-cart" data-name="Vino" data-price="85">Añadir al Carrito</button>
-      </div>
-
-      <div class="producto">
-        <h3>Whisky Macallan 18 años</h3>
-        <p>Whisky escocés de 18 años, una joya para conocedores.</p>
-        <img src="img/Whiski.jpg" alt="Whisky Macallan 18 años">
-        <p><strong>Precio: S/.450</strong></p>
-        <button class="add-to-cart" data-name="Whisky Macallan 18 años" data-price="450">Añadir al Carrito</button>
-      </div>
-
-      <div class="producto">
-        <h3>Licor Exclusivo</h3>
-        <p>Licor de hierbas único, destilado de forma tradicional.</p>
-        <img src="img/licor.jpg" alt="Licor Exclusivo">
-        <p><strong>Precio: S/.95</strong></p>
-        <button class="add-to-cart" data-name="Licor Exclusivo" data-price="95">Añadir al Carrito</button>
-      </div>
-
-      <div class="producto">
-        <h3>Gin Artesanal Premium</h3>
-        <p>Gin artesanal con un toque cítrico.</p>
-        <img src="img/cerveza.jpg" alt="Gin Artesanal Premium" height="10">
-        <p><strong>Precio: S/.125</strong></p>
-        <button class="add-to-cart" data-name="Gin Artesanal Premium" data-price="125">Añadir al Carrito</button>
-      </div>
-    </div>
-    <br>
-    <div>
-      <a href="todos-los-productos.html" class="ver-mas-btn">VER TODOS LOS PRODUCTOS</a>
-    </div>
-  </div>
-  <br>
-  </div>
 
 
   
   
   <!-- Código de Nuestra categorias -->
-  <body>
+  
    
     <!-- Sección principal de categorías -->
     <section class="categoriasprimera">
@@ -186,192 +138,357 @@
     </section>
 
     <!-- === CATALOGO DE VINOS SELECTOS === -->
-    <div id="catalogo-vinos" class="catalogo">
-        <div class="catalogo-header">
-            <h2>Vinos Selectos</h2>
-            <button id="cerrarCatalogo">X</button>
-        </div>
 
-        <div class="catalogo-grid">
-            <div class="vino-item">
-                <img src="img/VINO1.D.jpg" alt="Brunello di Montalcino D.O.C.G.">
-                <h3>Brunello di Montalcino D.O.C.G.</h3>
-                <p>S/. 436</p>
-                <button CLASS="BOTOOM2"> Comprar</button>
-            </div>
-
-            <div class="vino-item">
-                <img src="img/vino4.png" alt="Viña Zorzal Garnacha 2021">
-                <h3>Viña Zorzal Garnacha 2021</h3>
-                <p>S/. 89</p>
-                <button CLASS="BOTOOM2"> Comprar</button>
-            </div>
-
-            <div class="vino-item">
-                <img src="img/vino3.png" alt="El Enemigo Chardonnay 2022">
-                <h3>El Enemigo Chardonnay 2022</h3>
-                <p>S/. 82</p>
-                <button CLASS="BOTOOM2"> Comprar</button>
-            </div>
-
-            <div class="vino-item">
-                <img src="img/vino5.jpeg" alt="Can Sumoi Perfum 2023">
-                <h3>Can Sumoi Perfum 2023</h3>
-                <p>S/. 95</p>
-                <button CLASS="BOTOOM2"> Comprar</button>
-            </div>
-
-            <div class="vino-item">
-                <img src="img/vino2.png" alt="altos las hormigas malbec terroir 2021">
-                <h3>altos las hormigas malbec terroir 2021</h3>
-                <p>S/. 110</p>
-                <button CLASS="BOTOOM2"> Comprar</button>
-            </div>
-        </div>
+<div id="catalogo-vinos" class="catalogo">
+    <div class="catalogo-header">
+        <h2>Vinos Selectos</h2>
+        <button id="cerrarCatalogo">Volver</button>
     </div>
 
-    <!-- === CATALOGO DE WHISKY PREMIUM === -->
+    <div class="catalogo-grid">
+        <div class="vino-item">
+            <img src="img/VINO1.D.jpg" alt="Brunello di Montalcino D.O.C.G.">
+            <h3>Brunello di Montalcino D.O.C.G.</h3>
+            <p>S/. 436</p>
+            <button class="BOTOOM2"
+                onclick="agregarAlCarrito('Brunello di Montalcino D.O.C.G.', 436, 'img/VINO1.D.jpg')">
+                Añadir
+            </button>
+        </div>
+
+        <div class="vino-item">
+            <img src="img/vino4.png" alt="Viña Zorzal Garnacha 2021">
+            <h3>Viña Zorzal Garnacha 2021</h3>
+            <p>S/. 89</p>
+            <button class="BOTOOM2"
+                onclick="agregarAlCarrito('Viña Zorzal Garnacha 2021', 89, 'img/vino4.png')">
+               Añadir
+            </button>
+        </div>
+
+        <div class="vino-item">
+            <img src="img/vino3.png" alt="El Enemigo Chardonnay 2022">
+            <h3>El Enemigo Chardonnay 2022</h3>
+            <p>S/. 82</p>
+            <button class="BOTOOM2"
+                onclick="agregarAlCarrito('El Enemigo Chardonnay 2022', 82, 'img/vino3.png')">
+                Añadir
+            </button>
+        </div>
+
+        <div class="vino-item">
+            <img src="img/vino5.jpeg" alt="Can Sumoi Perfum 2023">
+            <h3>Can Sumoi Perfum 2023</h3>
+            <p>S/. 95</p>
+            <button class="BOTOOM2"
+                onclick="agregarAlCarrito('Can Sumoi Perfum 2023', 95, 'img/vino5.jpeg')">
+                Añadir
+            </button>
+        </div>
+
+        <div class="vino-item">
+            <img src="img/vino2.png" alt="altos las hormigas malbec terroir 2021">
+            <h3>Altos las hormigas malbec terroir 2021</h3>
+            <p>S/. 110</p>
+            <button class="BOTOOM2"
+                onclick="agregarAlCarrito('Altos las hormigas malbec terroir 2021', 110, 'img/vino2.png')">
+                Añadir
+            </button>
+        </div>
+    </div>
+</div>
+
+ <!-- === CATALOGO DE WHISKY=== -->
+
 <div id="catalogo-whisky" class="catalogo">
   <div class="catalogo-header">
+
     <h2>Whisky Premium</h2>
-    <button id="cerrarCatalogoWhisky">X</button>
+     <button id="cerrarCatalogoWhisky">Volver</button>
+    
   </div>
 
   <div class="catalogo-grid">
+
     <div class="vino-item">
       <img src="img/w1.jpg" alt="Uncle Nearest 1856">
       <h3>Uncle Nearest 1856</h3>
       <p>S/. 250</p>
-      <button CLASS="BOTOOM2"> Comprar</button>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Uncle Nearest 1856', 250, 'img/w1.jpg')">
+        Añadir
+      </button>
     </div>
 
     <div class="vino-item">
       <img src="img/w2.png" alt="Yamazaki">
-      <h3>- Yamazaki</h3>
+      <h3>Yamazaki</h3>
       <p>S/. 1600</p>
-      <button CLASS="BOTOOM2"> Comprar</button>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Yamazaki', 1600, 'img/w2.png')">
+        Añadir
+      </button>
     </div>
 
     <div class="vino-item">
       <img src="img/w3.jpg" alt="Johnnie Walker Blue Label">
       <h3>Johnnie Walker Blue Label</h3>
       <p>S/. 2000</p>
-      <button CLASS="BOTOOM2"> Comprar</button>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Johnnie Walker Blue Label', 2000, 'img/w3.jpg')">
+        Añadir
+      </button>
     </div>
 
     <div class="vino-item">
       <img src="img/w4.jpg" alt="Jack Daniel’s Single Barrel 100 Proof">
       <h3>Jack Daniel’s Single Barrel 100 Proof</h3>
       <p>S/. 300</p>
-      <button CLASS="BOTOOM2"> Comprar</button>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Jack Daniel’s Single Barrel 100 Proof', 300, 'img/w4.jpg')">
+        Añadir
+      </button>
     </div>
 
     <div class="vino-item">
       <img src="img/w5.png" alt="Glenfiddich Grand Cru 23 años">
       <h3>Glenfiddich Grand Cru 23 años</h3>
       <p>S/. 2000</p>
-      <button CLASS="BOTOOM2"> Comprar</button>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Glenfiddich Grand Cru 23 años', 2000, 'img/w5.png')">
+        Añadir
+      </button>
     </div>
+
   </div>
 </div>
 
-
-<!-- parte 3 de la categoria-->
+ <!-- === CATALOGO DE lICORES === -->
 
 <div id="catalogo-Licores" class="catalogo">
   <div class="catalogo-header">
     <h2>Licores Artesanales</h2>
-    <button id="cerrarCatalogoLicores">X</button>
+    <button id="cerrarCatalogoLicores">Volver</button>
   </div>
 
   <div class="catalogo-grid">
+
     <div class="vino-item">
-      <img src="img/Licores.jpg" alt="  Barranco Beer Company">
+      <img src="img/Licores.jpg" alt="Barranco Beer Company">
       <h3>Barranco Beer Company</h3>
       <p>S/. 25</p>
-      <button CLASS="BOTOOM2"> Comprar</button>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Barranco Beer Company', 25, 'img/Licores.jpg')">
+        Añadir
+      </button>
     </div>
 
     <div class="vino-item">
-      <img src="img/Licores2.png" alt="licor Sierra Andina">
-      <h3>licor Sierra Andina</h3>
+      <img src="img/Licores2.png" alt="Licor Sierra Andina">
+      <h3>Licor Sierra Andina</h3>
       <p>S/. 12</p>
-      <button CLASS="BOTOOM2"> Comprar</button>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Licor Sierra Andina', 12, 'img/Licores2.png')">
+        Añadir
+      </button>
     </div>
 
     <div class="vino-item">
       <img src="img/licores3.jpg" alt="Strong Ale">
       <h3>Strong Ale</h3>
       <p>S/. 16</p>
-      <button CLASS="BOTOOM2"> Comprar</button>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Strong Ale', 16, 'img/licores3.jpg')">
+        Añadir
+      </button>
     </div>
 
     <div class="vino-item">
       <img src="img/LICOR4D.jpg" alt="Gin Amazonian">
       <h3>Gin Amazonian</h3>
       <p>S/. 132</p>
-      <button CLASS="BOTOOM2"> Comprar</button>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Gin Amazonian', 132, 'img/LICOR4D.jpg')">
+        Añadir
+      </button>
     </div>
 
     <div class="vino-item">
-      <img src="img/licor5.jpg" alt="Whisky Edición Limitada">
+      <img src="img/licor5.jpg" alt="Miskimuña">
       <h3>Miskimuña</h3>
       <p>S/. 36</p>
-      <button CLASS="BOTOOM2"> Comprar</button>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Miskimuña', 36, 'img/licor5.jpg')">
+        Añadir
+      </button>
     </div>
+
   </div>
 </div>
 
 
-<!-- categoria 4-->
+ <!-- === CATALOGO DE CERVEZA=== -->
 
 <div id="catalogo-Cerveza" class="catalogo">
   <div class="catalogo-header">
     <h2>Cerveza Premium</h2>
-    <button id="cerrarCatalogoCerveza">X</button>
+    <button id="cerrarCatalogoCerveza">Volver</button>
   </div>
 
   <div class="catalogo-grid">
+
     <div class="vino-item">
-      <img src="img/cerveza1.png" alt="  Escocés 12 años">
+      <img src="img/cerveza1.png" alt="Stella Artois">
       <h3>Stella Artois</h3>
       <p>S/. 180</p>
-      <button CLASS="BOTOOM2"> Comprar</button>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Stella Artois', 180, 'img/cerveza1.png')">
+        Añadir
+      </button>
     </div>
 
     <div class="vino-item">
       <img src="img/cerveza2.jpg" alt="Heineken">
       <h3>Heineken</h3>
       <p>S/. 150</p>
-      <button CLASS="BOTOOM2"> Comprar</button>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Heineken', 150, 'img/cerveza2.jpg')">
+        Añadir
+      </button>
     </div>
 
     <div class="vino-item">
-      <img src="img/cerveza3.jpg" alt="Whisky Japonés Premium">
+      <img src="img/cerveza3.jpg" alt="Corona Extra">
       <h3>Corona Extra</h3>
       <p>S/. 210</p>
-      <button CLASS="BOTOOM2"> Comprar</button>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Corona Extra', 210, 'img/cerveza3.jpg')">
+        Añadir
+      </button>
     </div>
 
     <div class="vino-item">
-      <img src="img/cerveza4.jpg" alt="Whisky Americano Bourbon">
+      <img src="img/cerveza4.jpg" alt="Guinness Draught">
       <h3>Guinness Draught</h3>
       <p>S/. 175</p>
-      <button CLASS="BOTOOM2"> Comprar</button>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Guinness Draught', 175, 'img/cerveza4.jpg')">
+        Añadir
+      </button>
     </div>
 
     <div class="vino-item">
-      <img src="img/cerveza5.jpg" alt="Whisky Edición Limitada">
+      <img src="img/cerveza5.jpg" alt="Warsteiner Premium Verum">
       <h3>Warsteiner Premium Verum</h3>
       <p>S/. 250</p>
-      <button CLASS="BOTOOM2"> Comprar</button>
+      <button class="BOTOOM2"
+        onclick="agregarAlCarrito('Warsteiner Premium Verum', 250, 'img/cerveza5.jpg')">
+        Añadir
+      </button>
     </div>
+
   </div>
 </div>
 
+
     <script src="./script.js"></script>
-</body>
+
+
+    <!-- CARRITO SIDEBAR -->
+<div id="carritoSidebar" class="carrito-sidebar">
+    <div class="carrito-header">
+        <h2>Mi Carrito</h2>
+        <span id="cerrarCarrito" class="cerrar-carrito">&times;</span>
+    </div>
+
+    <div id="listaCarrito" class="carrito-items"></div>
+
+    <div class="carrito-footer">
+        <p>Total: S/ <span id="carritoTotal">0.00</span></p>
+        <button id="btnComprar" class="btn-comprar">Comprar</button>
+    </div>
+</div>
+
+<!-- BOTÓN PARA ABRIR EL CARRITO -->
+<div id="btnAbrirCarrito" class="btn-abrir-carrito">
+    🛒
+</div>
+
+<!-- POPUP DE PRODUCTO AÑADIDO -->
+<div id="popupCarrito" class="popup-carrito">
+    <div class="popup-content">
+        <span class="popup-close">×</span>
+
+        <div class="popup-icon">✔</div>
+
+        <h3 id="popupCantidad">1 producto</h3>
+        <p>fue añadido a su cesta</p>
+
+        <button id="btnVerCarrito" class="popup-btn">Editar Carrito</button>
+    </div>
+</div>
+
+
+<!-- IMPORTAR CARRITO -->
+<script src="carrito.js"></script>
+
+
+
 <!-- fiN PARTE DE CATEGORIAS ---------------------------------------------------------------------------------------------------------------- -->
+
+<!-- === PRODUCTOS DESTACADOS === -->
+  <div class="ProductoDestacado" id="ProductoDestacado" ">
+    <br>
+    <br>
+    <br>
+    <h1 style=" text-align: center;">Nuestros</h1>
+    <h1 style="text-align: center; color: orange;">Productos Destacados</h1>
+    <h2 style="text-align: center;">Una selección especial de nuestros licores más exclusivos y populares.</h2>
+    <br>
+
+    <div id="CategoriasVinos">
+      <div class="producto">
+        <h3>Vino</h3>
+        <p>Un vino tinto reserva con notas afrutadas.</p>
+        <img src="img/vino.jpg" alt="Vino">
+        <p><strong>Precio: S/.85</strong></p>
+        <button class="add-to-cart" data-name="Vino" data-price="85">Añadir al Carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Whisky Macallan 18 años</h3>
+        <p>Whisky escocés de 18 años, una joya para conocedores.</p>
+        <img src="img/Whiski.jpg" alt="Whisky Macallan 18 años">
+        <p><strong>Precio: S/.450</strong></p>
+        <button class="add-to-cart" data-name="Whisky Macallan 18 años" data-price="450">Añadir al Carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Licor Exclusivo</h3>
+        <p>Licor de hierbas único, destilado de forma tradicional.</p>
+        <img src="img/licor.jpg" alt="Licor Exclusivo">
+        <p><strong>Precio: S/.95</strong></p>
+        <button class="add-to-cart" data-name="Licor Exclusivo" data-price="95">Añadir al Carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Gin Artesanal Premium</h3>
+        <p>Gin artesanal con un toque cítrico.</p>
+        <img src="img/cerveza.jpg" alt="Gin Artesanal Premium" height="10">
+        <p><strong>Precio: S/.125</strong></p>
+        <button class="add-to-cart" data-name="Gin Artesanal Premium" data-price="125">Añadir al Carrito</button>
+      </div>
+    </div>
+    <br>
+    <div>
+      <a href="todos-los-productos.html" class="ver-mas-btn">VER TODOS LOS PRODUCTOS</a>
+    </div>
+  </div>
+  <br>
+  </div>
+
+
+
 
     <!-- PARTE DE HISTORIA {-------------------------------------------------------------------------------------------------------------------- -->
     <div class="Historia" id="historia">
@@ -543,11 +660,35 @@
         </div>
       </div>
     </section>
+
+<div id="alerta-exito" class="alerta">
+  ¡Mensaje enviado correctamente!
+</div>
+
+<script>
+document.getElementById("form-contacto").addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    const alerta = document.getElementById("alerta-exito");
+    alerta.classList.add("mostrar");
+
+    setTimeout(() => {
+        alerta.classList.remove("mostrar");
+    }, 3000);
+
+    this.reset();
+});
+</script>
+
+
     <!-- Cargar íconos de Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"
       crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <script src="app.js"></script>
+
+
+  
 </body>
 
 

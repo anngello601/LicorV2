@@ -92,19 +92,19 @@ main {
 /* Fondo principal */
 .fondo_Inicio {
   background-image: url("img/fondo.jpg");
-  background-size: cover;          /* Se ajusta automáticamente */
-  background-position: center;     /* Centra el fondo */
+  background-size: cover;         
+  background-position: center;     
   background-repeat: no-repeat;
-  background-attachment: fixed;    /* Fondo fijo elegante */
+  background-attachment: fixed;    
   width: 100%;
-  min-height: 100vh;               /* Mantiene la proporción de pantalla */
+  min-height: 100vh;               
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem 8%;                /* Ajuste para igualar márgenes globales */
+  padding: 4rem 8%;                
   box-sizing: border-box;
-  color: white;
+  color: rgb(226, 211, 211);
   text-align: center;
   position: relative;
   z-index: 1;
@@ -115,7 +115,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.253);
   z-index: 0;
 }
 
@@ -129,12 +129,13 @@ main {
 /* NAVBAR LIMPIA Y ELEGANTE */
 .navbar {
   width: 100%;
-  background-color: #3a0000; /* vino oscuro elegante */
-  color: #fff;
+  background-color: #161414; 
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
+  align-items: center;            /* Centra verticalmente */
+  height: 80px;                   /* ALTURA PERFECTA */
+  padding: 0 40px;                /* NO uses padding arriba/abajo */
   position: fixed;
   top: 0;
   left: 0;
@@ -142,41 +143,40 @@ main {
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: #f39c12;
-}
-
 /* Enlaces */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 10px;
   margin: 0;
-  padding: 0;
+  padding: 0;                     
 }
 
 .nav-links a {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
-  transition: color 0.3s;
+  display: flex;                 
+  align-items: center;            
+  height: 80px;                  
+  padding: 0 10px;               
 }
 
 .nav-links a:hover {
   color: #f39c12;
 }
 
+
 /* Botón carrito */
 .carrito {
-  background-color: #f39c12;
+  background-color: #ff7b00;
   border: none;
   color: #111;
   padding: 8px 14px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
+  
 }
 
 .carrito:hover {
@@ -184,7 +184,7 @@ main {
   color: #111;
 }
 
-/* Hamburguesa */
+/*  */
 .menu-toggle {
   display: none;
   background: none;
@@ -200,7 +200,7 @@ main {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #3a0000;
+    background-color:#320e4a;
     text-align: center;
     position: absolute;
     top: 60px;
@@ -288,7 +288,7 @@ header {
 }
 
 header:hover {
-  background-color: rgb(90, 20, 20);
+  background-color: #2b0909;
 }
 
 header .logo {
@@ -322,11 +322,13 @@ nav a:hover {
   background-color: sandybrown;
   color: white;
   border: none;
-  padding: 0.4rem 0.8rem;
+  padding: 0.8rem 1rem; 
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 17px;
 }
+
 
 .carrito:hover {
   background-color: rgb(205, 139, 16);
@@ -334,24 +336,26 @@ nav a:hover {
 
 /* Sección principal */
 .inicio {
-  text-align: center;
+  text-align: left;
   padding: 10% 5%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .subtitulo {
-  color: red;
-  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
 }
 
 .titulo {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: bold;
-  text-shadow: 4px 4px 8px black;
+ 
+  color: #ff7b00;
+  
 }
 
 .titulo span {
-  background-color: rgb(60, 9, 9);
+  background-color: rgba(60, 9, 9, 0);
   padding: 0.2rem 0.6rem;
   border-radius: 6px;
 }
@@ -376,7 +380,7 @@ nav a:hover {
 .btn2 {
   width: 30%;
   /* ocupa solo una parte del ancho */
-  padding: 0.8rem 1.5rem;
+  padding: rem 1.5rem;
   border-radius: 10px;
   border: 2px solid white;
   font-weight: bold;
@@ -390,13 +394,13 @@ nav a:hover {
 }
 
 .btn1 {
-  background-color: rgb(205, 139, 16);
+  background-color: #ff7b00;
   color: white;
   border: none;
 }
 
 .btn1:hover {
-  background-color: rgb(230, 180, 30);
+  background-color: #ff7b00;
 }
 
 .btn2 {
@@ -414,9 +418,9 @@ nav a:hover {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0);
   padding: 1rem;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: bold;
   text-shadow: 2px 2px 5px black;
   flex-wrap: wrap;
@@ -633,6 +637,29 @@ button:hover {
   flex: 1;
 }
 
+.alerta {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #66583ffb;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(207, 63, 63, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 9999;
+  padding-top: 300;
+  padding-right: 300;
+}
+
+.alerta.mostrar {
+  opacity: 1;
+}
+
+
 
 
 
@@ -650,8 +677,9 @@ button:hover {
 
 .categoriasprimera{
 
-    padding:10rem;
-    padding-top:1;
+    padding: rem;
+    padding-top:1rem;
+    background-color: #f8f8f8;
     
 
 }
@@ -697,8 +725,10 @@ p{
   align-items: center;     
   flex-wrap: wrap;           
   gap: 40px;                 
-  padding: 100px 20px;       
+  padding: 80px 20px;       
   background-color: #f8f8f8;
+   padding-top: 5px;
+   padding-bottom: 150px;
 }
 
 
@@ -834,7 +864,7 @@ p{
   transform: scale(1.05);
 }
 
-/* Contenedor de los vinos */
+/* Contenedor de los vinos #e36f00*/
 .catalogo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1091,6 +1121,214 @@ p{
   color: #fff;
 
 }
+/* SIDEBAR DEL CARRITO */
+.carrito-sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.carrito-sidebar.open {
+    right: 0;
+}
+
+.carrito-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.cerrar-carrito {
+    cursor: pointer;
+    font-size: 28px;
+    color: #444;
+}
+
+.carrito-items {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-top: 15px;
+}
+
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.carrito-item img {
+    flex: 1;
+    max-width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.carrito-item-info {
+    flex: 2;
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.btn-cantidad {
+    cursor: pointer;
+    background: #ddd;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.carrito-footer {
+    border-top: 2px solid #eee;
+    padding-top: 10px;
+}
+
+.btn-comprar {
+    width: 100%;
+    background: #ff7b00;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-abrir-carrito {
+   display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background:#111010;
+    color: white;
+    padding: 15px;
+    font-size: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+
+}
+.btn-abrir-carrito:hover {
+    background:rgb(60, 9, 9);   /* color cuando pasas el mouse */
+    transform: scale(1.1);  /* efecto de agrandar (opcional) */
+    transition: 0.3s;  /* suaviza la animación */
+}
 
 
+.btn-eliminar {
+   
+    background: #ff7b00;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+   margin-left: 10px;
+    margin-top: -20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
 
+.carrito-controles {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* === POPUP CARRITO === */
+/* === POPUP CARRITO === */
+.popup-carrito {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45); /* Más elegante */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-carrito.show {
+    display: flex;
+}
+
+.popup-content {
+    background: #111; /* Negro elegante como tu web */
+    padding: 25px 35px;
+    border-radius: 18px;
+    text-align: center;
+    width: 300px;
+    animation: fadeInPopup 0.3s ease;
+    position: relative;
+    box-shadow: 0 0 20px rgba(255, 122, 0, 0.25); /* Glow naranja suave */
+}
+
+/* Icono del check */
+.popup-icon {
+    font-size: 55px;
+    color: #ff7b00; /* Naranja que combina con tus botones */
+    margin-bottom: 10px;
+}
+
+/* Título */
+.popup-content h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff; /* Texto blanco para contraste */
+}
+
+/* Descripción */
+.popup-content p {
+    margin: 5px 0 15px;
+    color: #ccc; /* Gris suave elegante */
+}
+
+/* Botón */
+.popup-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #ff7b00;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    color: #111; /* Texto oscuro */
+}
+
+.popup-btn:hover {
+    background: #e66c00;
+}
+
+/* Botón cerrar */
+.popup-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ff7b00;
+}
+
+/* Animación */
+@keyframes fadeInPopup {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
