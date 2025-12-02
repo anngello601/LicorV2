@@ -1,40 +1,4 @@
-window.addEventListener("load", () => {
-  const loader = document.getElementById("loader");
-  if (!loader) return; // evita errores si no existe el loader
-  // Mostrar loader (por si acaso)
-  loader.style.display = "flex";
-  // Ocultar con animación suave
-  setTimeout(() => {
-    loader.style.transition = "opacity 1s ease";
-    loader.style.opacity = "0";
-    setTimeout(() => {
-      loader.style.display = "none";
-      document.body.style.overflow = "auto"; // permite scroll luego
-    }, 1000);
-  }, 3000);
-});
-
-const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
-
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-
-  });
-  
-  // Mostrar botón de carrito solo después del loader
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    const btnCarrito = document.getElementById("btnAbrirCarrito");
-    if (btnCarrito) btnCarrito.style.display = "flex";
-  }, 4000); // 3000 del delay + 1000 del fade out
-});
-
-  
-
-// PARTE DE CATEGORIAS --------------------------------------------------------------------------------------------------------------------------------------------- // 
-
-
+// Referencias
 const btnVinos = document.getElementById('verMasVinos');
 const catalogoVinos = document.getElementById('catalogo-vinos');
 const cerrarCatalogo = document.getElementById('cerrarCatalogo');
@@ -114,7 +78,7 @@ const modalalcohol= document.getElementById('modal-alcohol');
 const modalpresentacion = document.getElementById('modal-precio');
 const modalInfo = document.getElementById('modal-info');
 
-const productos = {
+const detallesBebidas = {
     1: {
         nombre: "Brunello di Montalcino D.O.C.G.",
         precio: "Precio: S/. 436",
@@ -328,8 +292,8 @@ const productos = {
 
 document.querySelectorAll('.btn-detalles').forEach(btn => {
     btn.addEventListener('click', () => {
-        const id = btn.dataset.producto;
-        const p = productos[id];
+        const id = btn.dataset.detallesBebidas;
+        const p = detallesBebidas[id];
 
         document.getElementById('modal-img').src = p.imagen;
         document.getElementById('modal-nombre').textContent = p.nombre;
@@ -345,18 +309,4 @@ document.querySelectorAll('.btn-detalles').forEach(btn => {
 
 document.getElementById('cerrarModal').addEventListener('click', () => {
     document.getElementById('modal-detalles').style.display = "none";
-});
-
-const btnVerTodos = document.getElementById('verTodosLosProductos');
-const catalogoTodos = document.getElementById('todos-los-productos');
-const cerrarTodos = document.getElementById('cerrarTodosLosProductos');
-
-btnVerTodos.addEventListener('click', () => {
-  catalogoTodos.style.display = 'flex';
-  document.body.style.overflow = 'hidden'; // Evita scroll del fondo
-});
-
-cerrarTodos.addEventListener('click', () => {
-  catalogoTodos.style.display = 'none';
-  document.body.style.overflow = 'auto';
 });

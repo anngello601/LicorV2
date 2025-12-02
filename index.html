@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="producto.css">
   <link rel="stylesheet" href="chatbot.css">
+  <link rel="stylesheet" href="scriptDetalle.js">
 </head>
 
   <div class="espacio-header"></div>
@@ -59,11 +60,9 @@
     </section>
   </main>
    <!-- Código de Nuestra categorias -->
-  
-   
-        <!-- Sección principal de categorías -->
 
- <section class="categoriasprimera" id="categoriasprimera">
+ <!-- Sección principal de categorías -->
+    <section class="categoriasprimera" id="categoriasprimera">
         <div class="titles" style="margin-top: 80px;">
             <div class="Titulo">
                 <span class="parte1">Nuestras</span>
@@ -204,79 +203,80 @@
   <br>
   </div>
 
-    <!-- === CATALOGO DE VINOS SELECTOS === -->
+ <!-- === CATALOGO DE VINOS SELECTOS === -->
+    <div id="catalogo-vinos" class="catalogo">
+        <div class="catalogo-header">
+            <h2>Vinos Selectos</h2>
+            <button id="cerrarCatalogo">X</button>
+            
+        </div>
 
-<div id="catalogo-vinos" class="catalogo">
-    <div class="catalogo-header">
-        <h2>Vinos Selectos</h2>
-        <button id="cerrarCatalogo">Volver</button>
-    </div>
-
-    <div class="catalogo-grid">
-        <div class="vino-item">
-            <img src="img/VINO1.D.jpg" alt="Brunello di Montalcino D.O.C.G.">
-            <h3>Brunello di Montalcino D.O.C.G.</h3>
-            <p>S/. 436</p>
-            <button class="BOTOOM2"
+        <div class="catalogo-grid">
+            <div class="vino-item">
+                <img src="img/VINO1.D.jpg" alt="Brunello di Montalcino D.O.C.G.">
+                <h3>Brunello di Montalcino D.O.C.G.</h3>
+                <p>S/. 436</p>
+                <button class="BOTOOM2"
                 onclick="agregarAlCarrito('Brunello di Montalcino D.O.C.G.', 436, 'img/VINO1.D.jpg')">
                 Añadir
             </button>
-        </div>
+                <button class="btn-detalles" data-producto="1">Ver detalles</button>
+            </div>
 
-        <div class="vino-item">
-            <img src="img/vino4.png" alt="Viña Zorzal Garnacha 2021">
-            <h3>Viña Zorzal Garnacha 2021</h3>
-            <p>S/. 89</p>
-            <button class="BOTOOM2"
+            <div class="vino-item">
+                <img src="img/vino4.png" alt="Viña Zorzal Garnacha 2021">
+                <h3>Viña Zorzal Garnacha 2021</h3>
+                <p>S/. 89</p>
+                <button class="BOTOOM2"
                 onclick="agregarAlCarrito('Viña Zorzal Garnacha 2021', 89, 'img/vino4.png')">
                Añadir
             </button>
-        </div>
+                <button class="btn-detalles" data-producto="2">Ver detalles</button>
+            </div>
 
-        <div class="vino-item">
-            <img src="img/vino3.png" alt="El Enemigo Chardonnay 2022">
-            <h3>El Enemigo Chardonnay 2022</h3>
-            <p>S/. 82</p>
-            <button class="BOTOOM2"
+            <div class="vino-item">
+                <img src="img/vino3.png" alt="El Enemigo Chardonnay 2022">
+                <h3>El Enemigo Chardonnay 2022</h3>
+                <p>S/. 82</p>
+                <button class="BOTOOM2"
                 onclick="agregarAlCarrito('El Enemigo Chardonnay 2022', 82, 'img/vino3.png')">
                 Añadir
             </button>
-        </div>
+                <button class="btn-detalles" data-producto="3">Ver detalles</button>
+            </div>
 
-        <div class="vino-item">
-            <img src="img/vino5.jpeg" alt="Can Sumoi Perfum 2023">
-            <h3>Can Sumoi Perfum 2023</h3>
-            <p>S/. 95</p>
-            <button class="BOTOOM2"
+            <div class="vino-item">
+                <img src="img/vino5.jpeg" alt="Can Sumoi Perfum 2023">
+                <h3>Can Sumoi Perfum 2023</h3>
+                <p>S/. 95</p>
+                <button class="BOTOOM2"
                 onclick="agregarAlCarrito('Can Sumoi Perfum 2023', 95, 'img/vino5.jpeg')">
                 Añadir
             </button>
-        </div>
+                <button class="btn-detalles" data-producto="4">Ver detalles</button>
+            </div>
 
-        <div class="vino-item">
-            <img src="img/vino2.png" alt="altos las hormigas malbec terroir 2021">
-            <h3>Altos las hormigas malbec terroir 2021</h3>
-            <p>S/. 110</p>
-            <button class="BOTOOM2"
+            <div class="vino-item">
+                <img src="img/vino2.png" alt="altos las hormigas malbec terroir 2021">
+                <h3>altos las hormigas malbec terroir 2021</h3>
+                <p>S/. 110</p>
+                <button class="BOTOOM2"
                 onclick="agregarAlCarrito('Altos las hormigas malbec terroir 2021', 110, 'img/vino2.png')">
                 Añadir
             </button>
+                <button class="btn-detalles" data-producto="5">Ver detalles</button>
+            </div>
         </div>
     </div>
-</div>
 
- <!-- === CATALOGO DE WHISKY=== -->
-
+    <!-- === CATALOGO DE WHISKY PREMIUM === -->
 <div id="catalogo-whisky" class="catalogo">
   <div class="catalogo-header">
-
     <h2>Whisky Premium</h2>
-     <button id="cerrarCatalogoWhisky">Volver</button>
-    
+    <button id="cerrarCatalogoWhisky">X</button>
   </div>
 
   <div class="catalogo-grid">
-
     <div class="vino-item">
       <img src="img/w1.jpg" alt="Uncle Nearest 1856">
       <h3>Uncle Nearest 1856</h3>
@@ -285,16 +285,18 @@
         onclick="agregarAlCarrito('Uncle Nearest 1856', 250, 'img/w1.jpg')">
         Añadir
       </button>
+      <button class="btn-detalles" data-producto="6">Ver detalles</button>
     </div>
 
     <div class="vino-item">
       <img src="img/w2.png" alt="Yamazaki">
-      <h3>Yamazaki</h3>
+      <h3>- Yamazaki</h3>
       <p>S/. 1600</p>
       <button class="BOTOOM2"
         onclick="agregarAlCarrito('Yamazaki', 1600, 'img/w2.png')">
         Añadir
       </button>
+      <button class="btn-detalles" data-producto="7">Ver detalles</button>
     </div>
 
     <div class="vino-item">
@@ -305,6 +307,7 @@
         onclick="agregarAlCarrito('Johnnie Walker Blue Label', 2000, 'img/w3.jpg')">
         Añadir
       </button>
+      <button class="btn-detalles" data-producto="8">Ver detalles</button>
     </div>
 
     <div class="vino-item">
@@ -315,6 +318,7 @@
         onclick="agregarAlCarrito('Jack Daniel’s Single Barrel 100 Proof', 300, 'img/w4.jpg')">
         Añadir
       </button>
+      <button class="btn-detalles" data-producto="9">Ver detalles</button>
     </div>
 
     <div class="vino-item">
@@ -325,39 +329,41 @@
         onclick="agregarAlCarrito('Glenfiddich Grand Cru 23 años', 2000, 'img/w5.png')">
         Añadir
       </button>
+      <button class="btn-detalles" data-producto="10">Ver detalles</button>
     </div>
-
   </div>
 </div>
 
- <!-- === CATALOGO DE lICORES === -->
+
+<!-- parte 3 de la categoria-->
 
 <div id="catalogo-Licores" class="catalogo">
   <div class="catalogo-header">
     <h2>Licores Artesanales</h2>
-    <button id="cerrarCatalogoLicores">Volver</button>
+    <button id="cerrarCatalogoLicores">X</button>
   </div>
 
   <div class="catalogo-grid">
-
     <div class="vino-item">
-      <img src="img/Licores.jpg" alt="Barranco Beer Company">
+      <img src="img/Licores.jpg" alt="  Barranco Beer Company">
       <h3>Barranco Beer Company</h3>
       <p>S/. 25</p>
       <button class="BOTOOM2"
         onclick="agregarAlCarrito('Barranco Beer Company', 25, 'img/Licores.jpg')">
         Añadir
       </button>
+      <button class="btn-detalles" data-producto="11">Ver detalles</button>
     </div>
 
     <div class="vino-item">
-      <img src="img/Licores2.png" alt="Licor Sierra Andina">
-      <h3>Licor Sierra Andina</h3>
+      <img src="img/Licores2.png" alt="licor Sierra Andina">
+      <h3>licor Sierra Andina</h3>
       <p>S/. 12</p>
       <button class="BOTOOM2"
         onclick="agregarAlCarrito('Licor Sierra Andina', 12, 'img/Licores2.png')">
         Añadir
       </button>
+      <button class="btn-detalles" data-producto="12">Ver detalles</button>
     </div>
 
     <div class="vino-item">
@@ -368,6 +374,7 @@
         onclick="agregarAlCarrito('Strong Ale', 16, 'img/licores3.jpg')">
         Añadir
       </button>
+      <button class="btn-detalles" data-producto="13">Ver detalles</button>
     </div>
 
     <div class="vino-item">
@@ -378,40 +385,41 @@
         onclick="agregarAlCarrito('Gin Amazonian', 132, 'img/LICOR4D.jpg')">
         Añadir
       </button>
+      <button class="btn-detalles" data-producto="14">Ver detalles</button>
     </div>
 
     <div class="vino-item">
-      <img src="img/licor5.jpg" alt="Miskimuña">
+      <img src="img/licor5.jpg" alt="Whisky Edición Limitada">
       <h3>Miskimuña</h3>
       <p>S/. 36</p>
       <button class="BOTOOM2"
         onclick="agregarAlCarrito('Miskimuña', 36, 'img/licor5.jpg')">
         Añadir
       </button>
+      <button class="btn-detalles" data-producto="20">Ver detalles</button>
     </div>
-
   </div>
 </div>
 
 
- <!-- === CATALOGO DE CERVEZA=== -->
+<!-- categoria 4-->
 
 <div id="catalogo-Cerveza" class="catalogo">
   <div class="catalogo-header">
     <h2>Cerveza Premium</h2>
-    <button id="cerrarCatalogoCerveza">Volver</button>
+    <button id="cerrarCatalogoCerveza">X</button>
   </div>
 
   <div class="catalogo-grid">
-
     <div class="vino-item">
-      <img src="img/cerveza1.png" alt="Stella Artois">
+      <img src="img/cerveza1.png" alt="  Escocés 12 años">
       <h3>Stella Artois</h3>
       <p>S/. 180</p>
       <button class="BOTOOM2"
         onclick="agregarAlCarrito('Stella Artois', 180, 'img/cerveza1.png')">
         Añadir
       </button>
+      <button class="btn-detalles" data-producto="15">Ver detalles</button>
     </div>
 
     <div class="vino-item">
@@ -422,41 +430,61 @@
         onclick="agregarAlCarrito('Heineken', 150, 'img/cerveza2.jpg')">
         Añadir
       </button>
+      <button class="btn-detalles" data-producto="16">Ver detalles</button>
     </div>
 
     <div class="vino-item">
-      <img src="img/cerveza3.jpg" alt="Corona Extra">
+      <img src="img/cerveza3.jpg" alt="Whisky Japonés Premium">
       <h3>Corona Extra</h3>
       <p>S/. 210</p>
       <button class="BOTOOM2"
         onclick="agregarAlCarrito('Corona Extra', 210, 'img/cerveza3.jpg')">
         Añadir
       </button>
+      <button class="btn-detalles" data-producto="17">Ver detalles</button>
     </div>
 
     <div class="vino-item">
-      <img src="img/cerveza4.jpg" alt="Guinness Draught">
+      <img src="img/cerveza4.jpg" alt="Whisky Americano Bourbon">
       <h3>Guinness Draught</h3>
       <p>S/. 175</p>
       <button class="BOTOOM2"
         onclick="agregarAlCarrito('Guinness Draught', 175, 'img/cerveza4.jpg')">
         Añadir
       </button>
+      <button class="btn-detalles" data-producto="18">Ver detalles</button>
     </div>
 
     <div class="vino-item">
-      <img src="img/cerveza5.jpg" alt="Warsteiner Premium Verum">
+      <img src="img/cerveza5.jpg" alt="Whisky Edición Limitada">
       <h3>Warsteiner Premium Verum</h3>
       <p>S/. 250</p>
       <button class="BOTOOM2"
         onclick="agregarAlCarrito('Warsteiner Premium Verum', 250, 'img/cerveza5.jpg')">
         Añadir
       </button>
+      <button class="btn-detalles" data-producto="19">Ver detalles</button>
     </div>
-
   </div>
 </div>
 
+    
+
+    <div id="modal-detalles" class="modal-detalle">
+    <div class="detalle-contenido">
+        <span id="cerrarModal" class="cerrar-modal">&times;</span>
+
+        <img id="modal-img" src="" class="detalle-img" alt="">
+        <h2 id="modal-nombre"></h2> 
+        <h2 id="modal-origen"></h2>
+        <h2 id="modal-alcohol"></h2>
+        <h2 id="modal-presentacion"></h2>
+        <h2 id="modal-descripcion">  </h2>
+        <h3 id="modal-precio" class="precio-detalle"></h3>
+
+        <p id="modal-info"></p>
+    </div>
+</div>
 
     <!-- CARRITO SIDEBAR -->
 <div id="carritoSidebar" class="carrito-sidebar">
@@ -881,6 +909,6 @@ document.getElementById("form-contacto").addEventListener("submit", function(e) 
     </div>
     <!-- Archivo JS del chatbot -->
     <script src="chatbot.js"></script>
-
+<script src="scriptDetalle.js"></script>
 </body>
 </html>
