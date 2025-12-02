@@ -13,7 +13,6 @@
     justify-content: center;
     gap: 20px;
     border: none;
-    /* eliminamos el borde de tabla */
     width: 90%;
     margin: auto;
 }
@@ -22,10 +21,9 @@
 #CategoriasVinos .producto {
     background-color: #fff;
     border: 2px solid #000;
-    border-radius: 10px;
-    /*  */
-    padding: 15px;
-    width: 250px;
+    border-radius: 12px;
+    padding: 20px;
+    width: 350px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out;
 }
@@ -34,7 +32,7 @@
     transform: scale(1.05);
 }
 
-/* Imagen adaptable */
+
 #CategoriasVinos .producto img {
     width: 100%;
     height: auto;
@@ -43,7 +41,7 @@
 
 /* Botón uniforme */
 .add-to-cart {
-    background-color: #4CAF50;
+    background-color: #d48611;
     border: none;
     color: white;
     padding: 10px 15px;
@@ -54,12 +52,12 @@
 }
 
 .add-to-cart:hover {
-    background-color: #45a049;
+    background-color: #d48611;
 }
 
 /* Botón “ver más” */
 .ver-mas-btn {
-    background-color: #008CBA;
+    background-color: #dfa60b;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -70,20 +68,69 @@
 }
 
 .ver-mas-btn:hover {
-    background-color: #0079a5;
+    background-color: #dfa60b;
 }
 
 /* --- Responsividad --- */
 @media (max-width: 768px) {
     #CategoriasVinos .producto {
         width: 45%;
-        /* dos columnas en pantallas medianas */
     }
 }
 
 @media (max-width: 480px) {
     #CategoriasVinos .producto {
         width: 90%;
-        /* una columna en móviles */
     }
+}
+
+/* Contenedor de imagen */
+.producto-imagen-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Texto sobre la imagen */
+.producto-texto {
+    position: absolute;
+    top: 250px;
+    left: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.producto-texto h3,
+.producto-texto p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.producto-descripcion {
+    font-size: 0.9em; 
+    margin-bottom: 2cm;
+}
+
+
+.producto-estrellas {
+    color: #ffc107;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 0.6em; /
+}
+
+
+.rating-text {
+    font-size: 1em;
+    color: #44484c;
+}
+
+.producto-subtitulo {
+    color: #ffa807; 
+    margin-bottom: 10px; 
+    font-size: 0.9em; 
 }

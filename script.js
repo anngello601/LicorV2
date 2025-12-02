@@ -21,7 +21,7 @@ const menuToggle = document.getElementById("menu-toggle");
     navLinks.classList.toggle("active");
 
   });
-
+  
   // Mostrar botón de carrito solo después del loader
 window.addEventListener("load", () => {
   setTimeout(() => {
@@ -100,4 +100,16 @@ cerrarCatalogoCerveza.addEventListener('click', () => {
 });
 
 
+const btnVerTodos = document.getElementById('verTodosLosProductos');
+const catalogoTodos = document.getElementById('todos-los-productos');
+const cerrarTodos = document.getElementById('cerrarTodosLosProductos');
 
+btnVerTodos.addEventListener('click', () => {
+  catalogoTodos.style.display = 'flex';
+  document.body.style.overflow = 'hidden'; // Evita scroll del fondo
+});
+
+cerrarTodos.addEventListener('click', () => {
+  catalogoTodos.style.display = 'none';
+  document.body.style.overflow = 'auto';
+});
