@@ -149,7 +149,8 @@ main {
   display: flex;
   gap: 10px;
   margin: 0;
-  padding: 0;                     
+  padding: 0;  
+  font-size: 19px;                   
 }
 
 .nav-links a {
@@ -163,8 +164,24 @@ main {
 }
 
 .nav-links a:hover {
-  color: #f39c12;
+  color: #ff7b00;
 }
+
+/* LOGO */
+.logo-header {
+
+  border: 2px ;
+  padding: 3px;
+  border-radius: 10px;
+}
+header .logo img {
+ border: 2px ;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+
+
 
 
 /* Botón carrito */
@@ -176,6 +193,8 @@ main {
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 19px;
+
   
 }
 
@@ -290,12 +309,21 @@ header {
 header:hover {
   background-color: #2b0909;
 }
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;  /* Centra verticalmente logo + texto */
+  gap: 10px;
+}
+
 
 header .logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
+
 }
+
 
 nav {
   display: flex;
@@ -380,7 +408,7 @@ nav a:hover {
 .btn2 {
   width: 30%;
   /* ocupa solo una parte del ancho */
-  padding: rem 1.5rem;
+ 
   border-radius: 10px;
   border: 2px solid white;
   font-weight: bold;
@@ -391,12 +419,22 @@ nav a:hover {
   color: white;
   text-align: center;
   margin: 5px;
+  font-size: 19px;
+  text-decoration: none;
+
+
 }
 
 .btn1 {
   background-color: #ff7b00;
   color: white;
   border: none;
+  font-size: 19px;
+  text-decoration: none;
+  padding: 0.7rem 1.5rem; /* ← padding correcto y centrado */
+  
+
+
 }
 
 .btn1:hover {
@@ -420,7 +458,7 @@ nav a:hover {
   gap: 2rem;
   background-color: rgba(0, 0, 0, 0);
   padding: 1rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: bold;
   text-shadow: 2px 2px 5px black;
   flex-wrap: wrap;
@@ -436,7 +474,10 @@ nav a:hover {
     flex-wrap: wrap;
     justify-content: center;
   }
-
+.subtitulo {
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+}
   .descripcion {
     font-size: 1rem;
   }
@@ -451,6 +492,10 @@ nav a:hover {
   .titulo {
     font-size: 2rem;
   }
+  .subtitulo {
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+}
 
   .btn1,
   .btn2 {
@@ -677,8 +722,9 @@ button:hover {
 
 .categoriasprimera{
 
-    padding:10rem;
-    padding-top:1;
+    padding: rem;
+    padding-top:1rem;
+    background-color: #f8f8f8;
     
 
 }
@@ -724,8 +770,10 @@ p{
   align-items: center;     
   flex-wrap: wrap;           
   gap: 40px;                 
-  padding: 100px 20px;       
+  padding: 80px 20px;       
   background-color: #f8f8f8;
+   padding-top: 5px;
+   padding-bottom: 150px;
 }
 
 
@@ -818,6 +866,22 @@ p{
   animation: fadeIn 0.5s ease forwards;
   opacity: 0;
 }
+.btn-volver {
+    background-color: #D4A017; /* dorado elegante */
+    color: white;
+    padding: 8px 16px; 
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: auto;
+    display: inline-block;
+}
+
+.btn-volver:hover {
+    background-color: #b48710; /* dorado más oscuro */
+}
+
 
 /* Animación al mostrarse */
 @keyframes fadeIn {
@@ -832,17 +896,20 @@ p{
 }
 
 /* Encabezado del catálogo */
+
 .catalogo-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  
   align-items: center;
   margin-bottom: 30px;
+  gap: 10px;
 }
 
 .catalogo-header h2 {
   font-size: 2rem;
   color: #ff7b00;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 
 .catalogo-header button {
@@ -861,7 +928,7 @@ p{
   transform: scale(1.05);
 }
 
-/* Contenedor de los vinos */
+/* Contenedor de los vinos #e36f00*/
 .catalogo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -914,46 +981,6 @@ p{
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s;
-}
-
-
-.modal-detalle {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6);
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-}
-
-.detalle-contenido {
-    background: #fff;
-    width: 450px;
-    padding: 20px;
-    border-radius: 12px;
-    position: relative;
-    animation: fadeIn .4s ease;
-}
-
-.cerrar-modal {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-.detalle-img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.precio-detalle {
-    color: #b30000;
-    font-weight: bold;
 }
 
 
@@ -1368,5 +1395,220 @@ p{
 @keyframes fadeInPopup {
     from { opacity: 0; transform: scale(0.8); }
     to { opacity: 1; transform: scale(1); }
+}
+/*comprar*/
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    padding: 20px;
+}
 
+.boleta-container {
+    max-width: 500px;
+    background: white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.total {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: right;
+}
+
+.metodos {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button.pagar-btn {
+    display: block;
+    width: 100%;
+    background: #d48611;
+    color: white;
+    padding: 12px;
+    border: none;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button.pagar-btn:hover {
+    opacity: 0.9;
+}
+
+.volver {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #555;
+}
+ /* Estilos básicos para el formulario de tarjeta de pago */
+        .tarjeta-pago-campos {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .tarjeta-pago-campos h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #be0b0b;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't increase width */
+        }
+
+        .form-group-inline {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-group-item {
+            flex: 1;
+        }
+
+        .pagar-con-tarjeta-btn {
+            background-color: #ff7700;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .pagar-con-tarjeta-btn:hover {
+            background-color: #0056b3;
+        }
+
+/* Animaciones */
+/* ===== MODAL (fondo oscuro) ===== */
+.modal-detalle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  display: none;           /* Oculto por defecto */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* ===== CONTENIDO DEL MODAL ===== */
+.detalle-contenido {
+  background: #1a1a1a;
+  width: 95%;
+  max-width: 420px;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 165, 0, 0.6);
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  animation: aparecer 0.25s ease-out;
+}
+
+/* Animación suave */
+@keyframes aparecer {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* ===== BOTÓN CERRAR ===== */
+.cerrar-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.cerrar-modal:hover {
+  color: #ffa500;
+  transform: scale(1.2);
+}
+
+/* ===== IMAGEN DEL PRODUCTO ===== */
+.detalle-img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* ===== TITULOS ===== */
+.detalle-contenido h2 {
+  font-size: 18px;
+  margin: 6px 0;
+  font-weight: 600;
+  color: #f5f5f5;
+}
+
+/* Descripción */
+#modal-descripcion {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 12px;
+  color: #d4d4d4;
+}
+
+/* Precio destacado */
+.precio-detalle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffa500;
+  margin-top: 15px;
+}
+
+/* Párrafo extra */
+#modal-info {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #cccccc;
 }

@@ -27,6 +27,12 @@ function sendMessage() {
     input.value = "";
     chatBody.scrollTop = chatBody.scrollHeight;
 }
+// Mostrar el botón del chatbot después de 3 segundos
+setTimeout(() => {
+    const btn = document.querySelector(".chatbot-btn");
+    btn.style.opacity = "1";
+    btn.style.pointerEvents = "auto";
+}, 4800);
 
 // ==============================
 // RESPUESTAS DEL CHATBOT

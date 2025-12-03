@@ -112,9 +112,7 @@ function eliminarDelCarrito(nombre) {
 
 // Comprar
 document.getElementById("btnComprar").addEventListener("click", () => {
-    alert("Compra realizada 🤝🍾");
-    carrito = [];
-    guardarCarrito();
+    window.location.href = "boleta.html";
 });
 
 function mostrarPopup(cantidad) {

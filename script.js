@@ -34,7 +34,7 @@ window.addEventListener("load", () => {
 
 // PARTE DE CATEGORIAS --------------------------------------------------------------------------------------------------------------------------------------------- // 
 
-
+// Referencias
 const btnVinos = document.getElementById('verMasVinos');
 const catalogoVinos = document.getElementById('catalogo-vinos');
 const cerrarCatalogo = document.getElementById('cerrarCatalogo');
@@ -111,10 +111,10 @@ const modalPrecio = document.getElementById('modal-precio');
 const modaltipo = document.getElementById('modal-tipo');
 const modalorigen = document.getElementById('modal-origen');
 const modalalcohol= document.getElementById('modal-alcohol');
-const modalpresentacion = document.getElementById('modal-precio');
+const modalpresentacion = document.getElementById('modal-presentacion');
 const modalInfo = document.getElementById('modal-info');
 
-const productos = {
+const detallesBebidas = {
     1: {
         nombre: "Brunello di Montalcino D.O.C.G.",
         precio: "Precio: S/. 436",
@@ -328,21 +328,25 @@ const productos = {
 
 document.querySelectorAll('.btn-detalles').forEach(btn => {
     btn.addEventListener('click', () => {
-        const id = btn.dataset.producto;
-        const p = productos[id];
+
+        const id = btn.dataset.id; // ← CORRECTO
+        const p = detallesBebidas[id];
+
+        if (!p) return; // evita errores si falta un ID
 
         document.getElementById('modal-img').src = p.imagen;
         document.getElementById('modal-nombre').textContent = p.nombre;
         document.getElementById('modal-precio').textContent = p.precio;
         document.getElementById('modal-origen').textContent = p.origen;
         document.getElementById('modal-alcohol').textContent = p.alcohol;
-      document.getElementById('modal-presentacion').textContent =  p.presentacion;
-      document.getElementById('modal-descripcion').textContent =  p.descripcion;
+        document.getElementById('modal-presentacion').textContent = p.presentacion;
+        document.getElementById('modal-descripcion').textContent = p.descripcion;
 
         document.getElementById('modal-detalles').style.display = "flex";
     });
 });
 
+// Cerrar modal
 document.getElementById('cerrarModal').addEventListener('click', () => {
     document.getElementById('modal-detalles').style.display = "none";
 });

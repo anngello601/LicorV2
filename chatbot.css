@@ -5,7 +5,7 @@
     left: 20px;
     width: 60px;
     height: 60px;
-    background: #b30000;
+    background: #3c0909 ;
     color: white;
     border: none;
     border-radius: 50%; /* ESFERA */
@@ -16,8 +16,12 @@
     justify-content: center;
     z-index: 9999;
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    transition: 0.2s ease;
+    opacity: 0;         /* oculto al cargar */
+    pointer-events: none; /* no clickeable */
+    transition: opacity 0.4s ease;
 }
+
+
 
 .chatbot-btn:hover {
     transform: scale(1.1);
@@ -47,7 +51,7 @@
 
 /* HEADER */
 .chat-header {
-    background: #b30000;
+    background:#3c0909;
     color: white;
     padding: 10px;
     display: flex;
@@ -109,9 +113,13 @@
 .chat-footer button {
     margin-left: 5px;
     padding: 8px 12px;
-    background: #b30000;
+    background: #3c0909;
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
 }
+
+
+
+

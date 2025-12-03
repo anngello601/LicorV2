@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleta de Compra - La Última Cena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="boleta-container">
+        <h2>🧾 Boleta de Compra</h2>
+
+        <div id="lista-productos"></div>
+
+        <div class="total" id="total"></div>
+
+        <div class="metodos">
+            <h3>Métodos de pago</h3>
+            <button class="pagar-btn" onclick="pagar('Tarjeta')">Tarjeta</button>
+            <button class="pagar-btn" onclick="pagar('Yape')">Yape</button>
+            <button class="pagar-btn" onclick="pagar('Plin')">Plin</button>
+        </div>
+
+        <div id="tarjeta-pago-campos" class="tarjeta-pago-campos" style="display: none;">
+            <h3>Detalles de la Tarjeta</h3>
+            <div class="form-group">
+                <label for="numero-tarjeta">Número de Tarjeta</label>
+                <input type="text" id="numero-tarjeta" placeholder="XXXX XXXX XXXX XXXX" maxlength="19">
+            </div>
+            <div class="form-group">
+                <label for="nombre-tarjeta">Nombre en la Tarjeta</label>
+                <input type="text" id="nombre-tarjeta" placeholder="Nombre Apellido">
+            </div>
+            <div class="form-group form-group-inline">
+                <div class="form-group-item">
+                    <label for="fecha-expiracion">Fecha de Expiración</label>
+                    <input type="text" id="fecha-expiracion" placeholder="MM/AA" maxlength="5">
+                </div>
+                <div class="form-group-item">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" placeholder="XXX" maxlength="4">
+                </div>
+            </div>
+            <button class="pagar-con-tarjeta-btn" onclick="pagoRealizado('Tarjeta')">Pagar con Tarjeta</button>
+        </div>
+
+        <div id="yape-pago" class="qr-pago-container" style="display: none;">
+            <h3>Pago con Yape</h3>
+            <p>Escanea el siguiente código QR con la app de Yape.</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=Yape%20Payment%20Placeholder&size=200x200" alt="Yape QR Code">
+            <button class="pago-realizado-btn" onclick="pagoRealizado('Yape')">Ya pagué</button>
+        </div>
+
+        <div id="plin-pago" class="qr-pago-container" style="display: none;">
+            <h3>Pago con Plin</h3>
+            <p>Escanea el siguiente código QR con la app de BBVA.</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=Plin%20Payment%20Placeholder&size=200x200" alt="Plin QR Code">
+            <button class="pago-realizado-btn" onclick="pagoRealizado('Plin')">Ya pagué</button>
+        </div>
+
+        <a href="index.html" class="volver">← Volver a la tienda</a>
+    </div>
+
+    <style>
+        /* Estilos básicos para el formulario de tarjeta de pago */
+        .tarjeta-pago-campos {
+            background-color: #e34848;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            text-align: left;
+        }
+        .tarjeta-pago-campos h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #020216;
+        }
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group-inline {
+            display: flex;
+            gap: 15px;
+        }
+        .form-group-item {
+            flex: 1;
+        }
+        .pagar-con-tarjeta-btn {
+            background-color: #e76b28;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .pagar-con-tarjeta-btn:hover {
+            background-color: #0056b3;
+        }
+        /* Estilos para los contenedores de QR */
+        .qr-pago-container {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .qr-pago-container h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .qr-pago-container p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .qr-pago-container img {
+            margin-bottom: 20px;
+        }
+        .pago-realizado-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .pago-realizado-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carrito = JSON.parse(localStorage.getItem('carrito')) || []; 
+            const listaProductos = document.getElementById("lista-productos");
+            const totalElement = document.getElementById("total");
+
+            let total = 0;
+
+            if (carrito.length === 0) {
+                listaProductos.innerHTML = "<p>No hay productos en el carrito.</p>";
+                totalElement.textContent = "";
+                return;
+            }
+
+            carrito.forEach(item => {
+                const div = document.createElement("div");
+                div.classList.add("item");
+
+                div.innerHTML = `
+                    <span>${item.cantidad} × ${item.nombre}</span>
+                    <span>S/ ${(item.precio * item.cantidad).toFixed(2)}</span>
+                `;
+
+                listaProductos.appendChild(div);
+                total += item.precio * item.cantidad;
+            });
+
+            totalElement.textContent = "Total: S/ " + total.toFixed(2);
+        });
+
+        function pagar(metodo) {
+            const tarjetaCampos = document.getElementById("tarjeta-pago-campos");
+            const yapePago = document.getElementById("yape-pago");
+            const plinPago = document.getElementById("plin-pago");
+
+            // Hide all payment details first
+            tarjetaCampos.style.display = 'none';
+            yapePago.style.display = 'none';
+            plinPago.style.display = 'none';
+
+            // Show the selected one
+            if (metodo === 'Tarjeta') {
+                tarjetaCampos.style.display = 'block';
+            } else if (metodo === 'Yape') {
+                yapePago.style.display = 'block';
+            } else if (metodo === 'Plin') {
+                plinPago.style.display = 'block';
+            }
+        }
+
+        function pagoRealizado(metodo) {
+            // A simple validation for card payment
+            if (metodo === 'Tarjeta') {
+                const numero = document.getElementById('numero-tarjeta').value;
+                const nombre = document.getElementById('nombre-tarjeta').value;
+                const expiracion = document.getElementById('fecha-expiracion').value;
+                const cvv = document.getElementById('cvv').value;
+
+                if (!numero || !nombre || !expiracion || !cvv) {
+                    alert('Por favor, completa todos los campos de la tarjeta.');
+                    return; // Stop if validation fails
+                }
+            }
+            
+            alert("¡Gracias por tu compra con " + metodo + "! Tu pedido está siendo procesado.");
+            localStorage.removeItem('carrito'); // Clear the cart
+            window.location.href = "index.html"; // Redirect to home
+        }
+    </script>
+</body>
+</html>
